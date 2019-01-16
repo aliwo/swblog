@@ -105,10 +105,10 @@ analytics:
 # Site Author
 author:
   name             : "정승원"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/var_name_meme.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "코드에서부터 감성이 우러나온다는 <br> 문과 출신 개발자."
-  location         : "경기도 고양시 일산"
-  email            :
+  location         : "Ilsan, Goyang-si"
+  email            : "aliwo@naver.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -124,7 +124,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/aliwo"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
