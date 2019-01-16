@@ -1,0 +1,61 @@
+main:
+  - title: "파이썬의 정석"
+    url: /series/principles_of_python/intro/index.html
+  - title: "Category"
+    url: /categories/
+
+pop:
+  - title: 안녕? 난 파이썬이라고 해
+    children:
+      - title: "들어가며"
+        url: /series/principles_of_python/intro/index.html
+      - title: "파이썬"
+        url: /series/principles_of_python/comment/index.html
+      - title: "개발환경 설치"
+        url: /docs/installation/
+
+  - title: 변수와 타입
+    children:
+      - title: "주석"
+        url: /docs/configuration/
+      - title: "입력과 출력"
+        url: /docs/navigation/
+      - title: "인터렉티브 Shell"
+        url: /docs/ui-text/
+      - title: "산술 연산자"
+        url: /docs/authors/
+      - title: "논리 연산자"
+        url: /docs/layouts/
+
+  - title: Customization
+    children:
+      - title: "공개예정"
+        url: /docs/configuration/
+      - title: "공개예정"
+        url: /docs/navigation/
+      - title: "공개예정"
+        url: /docs/ui-text/
+      - title: "공개예정"
+        url: /docs/authors/
+      - title: "공개예정"
+        url: /docs/layouts/
+
+  - title: 예외처리
+    children:
+      - title: "해보고 제외하고 아니면 마지막으로"
+        url: /docs/posts/
+      - title: "공개예정"
+        url: /docs/pages/
+      - title: "공개예정"
+        url: /docs/collections/
+      - title: "공개예정"
+        url: /docs/helpers/
+      - title: "공개예정"
+        url: /docs/utility-classes/
+
+  - title: 부록
+    children:
+      - title: "그 모든 것을 보시니 보시기에 심히 좋았더라"
+        url: /docs/stylesheets/
+      - title: "공개예정"
+        url: /docs/javascript/
