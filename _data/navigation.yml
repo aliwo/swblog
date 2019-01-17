@@ -9,15 +9,17 @@ pop:
     children:
       - title: "들어가며"
         url: /series/principles_of_python/intro/index.html
-      - title: "파이썬"
-        url: /series/principles_of_python/comment/index.html
+      - title: "파이썬 설치"
+        url: /series/principles_of_python/install_python/index.html
       - title: "개발환경 설치"
-        url: /docs/installation/
+        url: /series/principles_of_python/install_ide/index.html
 
   - title: 변수와 타입
     children:
       - title: "주석"
-        url: /docs/configuration/
+        url: /series/principles_of_python/comment/index.html
+      - title: "코드 블록"
+        url: /series/principles_of_python/code_block/index.html
       - title: "입력과 출력"
         url: /docs/navigation/
       - title: "인터렉티브 Shell"
