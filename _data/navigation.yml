@@ -18,7 +18,7 @@ pop:
       - title: "The Zen of Python"
         url: /series/principles_of_python/zen_of_python/
 
-  - title: 변수와 타입
+  - title: 파이썬 코드 스타일
     children:
       - title: "주석"
         url: /series/principles_of_python/comment/index.html
@@ -28,10 +28,67 @@ pop:
         url: /docs/navigation/
       - title: "인터렉티브 Shell"
         url: /docs/ui-text/
+
+  - title: 연산자
+    children:
       - title: "산술 연산자"
         url: /docs/authors/
       - title: "논리 연산자"
         url: /docs/layouts/
+      - title: "삼항 연산자"
+        url: /docs/layouts/
+
+  - title: 자료형
+    children:
+      - title: "리스트"
+        url: /docs/authors/
+      - title: "집합(set)"
+        url: /docs/authors/
+      - title: "튜플"
+        url: /docs/authors/
+      - title: "딕셔너리"
+        url: /docs/layouts/
+      - title: "[Advanced]DefaultDict"
+        url: /docs/navigation/
+
+  - title: 함수
+    children:
+      - title: "함수"
+        url: /series/principles_of_python/comment/index.html
+      - title: "결과 리턴하기"
+        url: /series/principles_of_python/comment/index.html
+      - title: "기억되지 못하는 자의 슬픔. 람다"
+        url: /series/principles_of_python/code_block/index.html
+      - title: "[Advanced] 재귀"
+        url: /series/principles_of_python/code_block/index.html
+      - title: "[Advanced] First Class Citizen"
+        url: /series/principles_of_python/code_block/index.html
+      - title: "함수를 반복한다. 제너레이터"
+        url: /series/principles_of_python/code_block/index.html
+
+  - title: 클래스
+    children:
+      - title: "클래스와 인스턴스"
+        url: /series/principles_of_python/intro/index.html
+      - title: "메소드와 self"
+        url: /series/principles_of_python/intro/index.html
+      - title: "자식은 부모를 닮아. 상속"
+        url: /series/principles_of_python/intro/index.html
+      - title: "단 한 번 호출되는 메소드, 생성자"
+        url: /series/principles_of_python/intro/index.html
+      - title: "다중 상속"
+        url: /series/principles_of_python/intro/index.html
+      - title: "[Advanced] Diamond"
+        url: /series/principles_of_python/intro/index.html
+
+  - title: 클래스와 메소드
+    children:
+      - title: "Static 메소드"
+        url: /series/principles_of_python/intro/index.html
+      - title: "Class 메소드"
+        url: /series/principles_of_python/intro/index.html
+      - title: "__doc__"
+        url: /series/principles_of_python/intro/index.html
 
   - title: 모듈
     children:
@@ -59,9 +116,23 @@ pop:
       - title: "공개예정"
         url: /docs/utility-classes/
 
+  - title: 고급 파이썬 문법
+    children:
+      - title: "데코레이터"
+        url: /docs/posts/
+      - title: "공개예정"
+        url: /docs/pages/
+
   - title: 부록
     children:
       - title: "그 모든 것을 보시니 보시기에 심히 좋았더라"
         url: /docs/stylesheets/
-      - title: "공개예정"
+      - title: "초콜릿 공장 만들기"
         url: /docs/javascript/
+
+  - title: "부록2: 초콜릿 공장 만들기"
+    children:
+      - title: "초콜릿 공장에 팻말 세우기"
+        url: /docs/posts/
+      - title: "좋은 카카오와 썩은 카카오"
+        url: /docs/pages/
