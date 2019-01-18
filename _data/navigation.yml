@@ -1,6 +1,8 @@
 main:
   - title: "파이썬의 정석"
     url: /series/principles_of_python/intro/index.html
+  - title: "About"
+    url: /about/
   - title: "Categories"
     url: /categories/
 
@@ -8,11 +10,13 @@ pop:
   - title: 안녕? 난 파이썬이라고 해
     children:
       - title: "들어가며"
-        url: /series/principles_of_python/intro/index.html
+        url: /series/principles_of_python/intro/
       - title: "파이썬 설치"
-        url: /series/principles_of_python/install_python/index.html
+        url: /series/principles_of_python/install_python/
       - title: "개발환경 설치"
-        url: /series/principles_of_python/install_ide/index.html
+        url: /series/principles_of_python/install_ide/
+      - title: "The Zen of Python"
+        url: /series/principles_of_python/zen_of_python/
 
   - title: 변수와 타입
     children:
