@@ -10,7 +10,7 @@ pop:
   - title: 안녕? 난 파이썬이라고 해
     children:
       - title: "들어가며"
-        url: /series/principles_of_python/intro/
+        url: /series/principles_of_python/intro/index.html
       - title: "파이썬 설치"
         url: /series/principles_of_python/install_python/
       - title: "개발환경 설치"
@@ -33,11 +33,11 @@ pop:
       - title: "논리 연산자"
         url: /docs/layouts/
 
-  - title: Customization
+  - title: 모듈
     children:
-      - title: "공개예정"
-        url: /docs/configuration/
-      - title: "공개예정"
+      - title: "니것도 내꺼 내것도 내꺼"
+        url: /series/principles_of_python/import/index.html
+      - title: "모듈"
         url: /docs/navigation/
       - title: "공개예정"
         url: /docs/ui-text/

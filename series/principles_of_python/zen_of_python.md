@@ -14,7 +14,7 @@ pycharm 을 켜자. 하단의 Python Console을 클릭하고 다음 문장을 �
 
 ``` markdown
 The Zen of Python, by Tim Peters
-<br>
+
 Beautiful is better than ugly.
 Explicit is better than implicit.
 Simple is better than complex.
@@ -41,10 +41,12 @@ href="https://bitbucket.org/sk8erchoi/peps-korean/src/767c779c164856af198a9d08d9
 링크
 </a> 천천히 읽어보자. 다 한 번쯤 읽어볼 가치가 있는 뼈가되고 살이 되는 문구라고 생각한다.
 
+Zen of Python 을 정독했다면 이어서 아래를 읽기 바란다.
+
 <h2>가르침</h2>
-필자가 '파이썬의 정석' 에서 강조하고 싶은 것은
+다 중요한 내용이고, 앞으로 몇 번 더 Zen of Python 의 특정 부분을 인용할 것이다. 이번에는
 **There should be one-- and preferably only one --obvious way to do it.**
-이다. 파이썬은 어떤 문제를 해결하기 위해 '가장 이상적인' 해답 하나가 존재한다고 생각한다.
+에 대해서 이야기 하고 싶다. 파이썬은 어떤 문제를 해결하기 위해 '가장 이상적인' 해답 하나가 존재한다고 생각한다.
 그리고 그 방법은 파이썬 커뮤니티에 의해 만들어진 형용사 pythonic 에 의해 대표된다. 이 단어는 '파이썬 다운' 해결 방법을
 의미하는 단어이다.
 
