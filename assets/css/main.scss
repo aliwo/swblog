@@ -16,13 +16,15 @@
 
 
 // 글 폰트 조정
-article .page__title {
-  font-size : 1.2em
-}
+// TODO: 포스트와 파이썬 강의록에서 글씨 크기가 다르다. 그리고 아래 article .page__content 는 css 우선 순위 때문에 제대로 먹지도 않는다. 문제해결하기
 
-article .page__content {
-  font-size : 0.8em
-}
+//article .page__title {
+//  font-size : 1.2em
+//}
+//
+//article .page__content {
+//  font-size : 0.8em
+//}
 
 
 
