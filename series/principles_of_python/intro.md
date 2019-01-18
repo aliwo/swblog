@@ -1,19 +1,30 @@
 ---
-layout: single
 title:  "들어가며"
 date:   2019-01-14 20:21:03 +0900
 ---
  
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+
+<h2>반갑습니다.</h2>
+
+'참고서'의 특성상 '습니다' 체 보다는 '이다' 체가 더 어룰리는 것 같아 후자를 사용하겠습니다. 
+
+
+
+
+<h2>Tag</h2>
+본 문서안의 어떤 내용은 다음과 같은 tag 가 붙을 것인데, 각각의 의미는 다음과 같다.
+* Pythonify : 다른 프로그래밍 언어를 다뤄본 경험이 있는 독자들을 위한 글 입니다. 여러분의 Java 뇌를
+Python 뇌로 갈아 끼워 드리겠다.
+* Advanced : 재귀 함수, 상속과 구성, Closure 등 처음에 이해하기는 
+어렵지만, 알아두면 뼈가 되고 살이 되는 내용이라는 뜻이다.
+* Tmi : 문서가 자주 쓰이지 않는 문법을 다룬다는 뜻이다. 대신 개발자들 사이에서도 파이썬 좀 아는 체 할 수 있다. 
+
+
+<h2>얻게 될 것</h2>
+본 문서를 정독한 후에 여러분은 다음과 같은 능력을 얻게 된다.
+* 파이썬 모듈, 파이썬 프로그램을 작성할 수 있다.
+* 다른 사람이 작성한 파이썬 프로그램을 (어느정도) 이해할 수 있다.
+
+

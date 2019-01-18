@@ -7,7 +7,24 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+// 아바타 크기 조정
 .author__avatar img {
   max-width: 200px;
   border-radius: unset;
 }
+
+
+
+
+// 글 폰트 조정
+// 실제 크롬 디버거로 보면 더 큰 폰트 값이 찍히지만, 실제 눈으로 보이는 글자 크기는 줄어 있습니다.
+article .page__title {
+  font-size : 1.2em
+}
+
+article .page__content {
+  font-size : 0.8em
+}
+
+
+
