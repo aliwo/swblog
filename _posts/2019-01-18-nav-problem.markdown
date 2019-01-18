@@ -30,8 +30,9 @@ pop:
         # 후략
 ```
 제 블로그에도 같은 네비게이션을 간단한 설정 만으로 적용할 수 있었습니다. 
-적용한 네비게이션은 url 링크도 잘 작동했고, 디자인도 예쁘고 깔끔해 만족하고 있었습니다만 
-문제는 공식 문서 페이지에서는 있었던 '강조 표시 기능'이 제 블로그에서는 작동하지 않았다는 겁니다. 
+적용한 네비게이션은 url 링크도 잘 작동했고, 디자인도 예쁘고 깔끔해 만족하고 있었습니다.
+다만 적용 하루 이후에 네비게이션을 다시 보니
+공식 문서 페이지에서는 있었던 '강조 표시 기능'이 제 블로그에서는 작동하지 않고 있음을 발견했습니다. 
 <br><br>
 
 ![image-center](/assets/images/2019-01-18-nav-2.jpg){: .align-center}
@@ -43,7 +44,7 @@ pop:
 
 
 <h2>First Try</h2>
-네비게이션을 커스텀 할 수 있는 제가 아직 모르는 설정이 어딘가에 있는건지 먼저 찾아 보았습니다.
+네비게이션을 커스텀 할 수 있는, 제가 아직 모르는 설정이 어딘가에 있는건지 먼저 찾아 보았습니다.
 minimal mistake 안에 이미 적용된 기능을 사용하는 편이 제가 직접 커스텀 하는 것 보다
 버그가 발생활 확률도 적고(minimal mistake는 이미 테스트를 거쳐서 배포됬기 때문에) 수고도 덜 드니까요.
 
@@ -54,15 +55,16 @@ minimal mistake 안에 이미 적용된 기능을 사용하는 편이 제가 직
 역시 건질만한 것은 없었습니다.
 
 크롬 디버거를 사용해서 조사했을때 '강조표시' 되어 있는 a 태그에만 class="active" 가
-붙어 있는 것을 확인했습니다. 웹 프론트 개발 하면서 많이 본 패턴이네요.
+붙어 있는 것을 확인했습니다. 웹 프론트 개발 하면서 많이 본 패턴입니다.
 보통 이런 패턴이라면 대상(네비게이션)이 전부 렌더링 된 이후,
 혹은 document 가 ready 이벤트를 발생시켰을때,
-제이쿼리를 사용해 url (혹은 항목의 제목) 과 네비게이션 목록을 조사해
+제이쿼리를 사용해 네비게이션 목록을 조사해 현재 url (혹은 항목의 제목)과
 서로 일치하는 값을 가진 네비게이션 항목에 'active' 클래스를 붙여주는 것이라고 추측했습니다.
 
 이제 해당 자바스크립트 코드가 어디있는지를 찾아내 문제를 잡아내면 됩니다. 그러나
 페이지 소스 전체에서 'active'를 검색해도 나오는 것은 uglified 된 자바스크립트라 
 대체 코드가 뭘 하고 있는건지 파악하기는 어려웠습니다.
+
 다시 막혔습니다.
 
 <h2>Second Try</h2>
@@ -80,9 +82,44 @@ minimal mistake의 기본 설정만으로 해결할 수 없다면 커스텀 자�
 
 그러나 새로운 글을 적을 때 마다 파일을 include 해야 한다는 점이 너무 번거롭다고 생각했습니다.
 
-<h2>Third Try</h2>
-답이 없어서 일단 마구잡이로 minimal mistake github 를 뒤져 봤습니다.
+<h2>Third Try: 해결</h2>
+한 번 더 minimal mistake github 를 뒤져 봤습니다. 앞서 _include 디렉터리의 존재를
+알게 되어서인지 그쪽으로 눈이 갔습니다. 거기서 찾은 것은 파일 'nav_list'. 
+
+```markdown
+{%- raw -%} 
+{% comment %} set "active" class on current page {% endcomment %}
+{% if child.url == page.url %}
+  {% assign active = "active" %} 
+{% endraw %} 
+```
+위 라인을 읽고 나서 새로운 설정을 찾을 필요도, 자바스크립트를 작성할 필요도 없다는 걸 바로 깨달았습니다.
+
+page.url과 yml의 url이 다른게 문제였구나.
+{: .text-center}
+
+그래서 아무 페이지에서 page.url 을 출력해 보았는데, /series/principles_of_python/<항목>/ 형식이라는 것을 알게 됩니다.
+제가 yml 에 적었던 url 은 /series/principles_of_python/<항목>/index.html 이니, 서로 일치하지 않습니다.
+각 url 마다 index.html 부분만 삭제해주면 일치하게 됩니다.
+
+```yaml
+# _data/navigation.yml
+# 초략
+pop:
+  - title: 안녕? 난 파이썬이라고 해
+    children:
+      - title: "들어가며"
+        url: /series/principles_of_python/intro/index.html # page.url 과 맞지 않음.
+      - title: "파이썬 설치"
+        url: /series/principles_of_python/install_python/ # page.url 과 일치함. 모든 url 을 이와같이 바꿔야 함.
+      - title: "개발환경 설치"
+        # 후략
+```
 
 
+<h2>결과</h2>
 
-<h2>해결</h2>
+![image-center](/assets/images/2019-01-18-nav-3.jpg){: .align-center}
+
+깔끔하게 해결
+{: .text-center}

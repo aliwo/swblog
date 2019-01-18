@@ -7,9 +7,8 @@ date:   2019-01-14 20:21:03 +0900
 ![image-center](/assets/images/meme_recaptcha.jpg){: .align-center}
 
 인간은 읽을 수 있고, 로봇은(혹은 악성 프로그램은) 읽을 수 없는 이미지를 CAPTCHA(Completely Automated Public Turing test to tell Computers and Humans Apart) 라고 한다. 
-CAPTCHA라는 용어가 낯설게 느껴진다면 콘서트 예매를 할 때를 떠올려 보자(혹은 회원가입을 할 때를 떠올려도 좋다). 
-우리는 마지막 확인 버튼을 누르기 전에 자동 입력 방지 문자를 입력한다.  
-이 자동 입력 방지 문자도 CAPTCHA의 일종이다.
+CAPTCHA라는 용어가 낯설게 느껴진다면 콘서트 예매를 할 때를 떠올려 보자(혹은 회원가입을 할 때를 떠올려도 좋다). 우리는 마지막 
+확인 버튼을 누르기 전에 자동 입력 방지 문자를 입력한다. 이 자동 입력 방지 문자도 CAPTCHA의 일종이다.
 <br><br>
 CAPTCHA 처럼 매크로를 막아내는 역할은 아니지만 프로그래밍에서도 '사람만 읽기로' 약속된 코드가 있다. 
 '주석' 이라고 부르는데, 이 주석은 사람만 읽고, 프로그램은 무시하도록 약속되어 있다. 
