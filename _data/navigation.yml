@@ -25,14 +25,14 @@ pop:
       - title: "코드 블록"
         url: /series/principles_of_python/code_block/index.html
       - title: "입력과 출력"
-        url: /docs/navigation/
+        url: /series/principles_of_python/input_output/index.html
       - title: "인터렉티브 Shell"
-        url: /docs/ui-text/
+        url: /series/principles_of_python/interactive_shell/index.html
 
   - title: 연산자
     children:
       - title: "산술 연산자"
-        url: /docs/authors/
+        url: /series/principles_of_python/arithmetic/index.html
       - title: "논리 연산자"
         url: /docs/layouts/
       - title: "삼항 연산자"
