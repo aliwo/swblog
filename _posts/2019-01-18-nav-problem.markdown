@@ -7,7 +7,7 @@ categories: [jekyll]
 
 <h2> navigation 에서 현재 항목이 강조표시되지 않는 문제 </h2>
 
-![image-center](/assets/images/2019-01-18-nav-1.jpg){: .align-center}
+![image-center]({{ site.baseurl }}/assets/images/2019-01-18-nav-1.jpg){: .align-center}
 
 빨간 밑줄, Bold로 강조 표시 되어 있습니다.
 {: .text-center}
@@ -35,7 +35,7 @@ pop:
 공식 문서 페이지에서는 있었던 '강조 표시 기능'이 제 블로그에서는 작동하지 않고 있음을 발견했습니다. 
 <br><br>
 
-![image-center](/assets/images/2019-01-18-nav-2.jpg){: .align-center}
+![image-center]({{ site.baseurl }}/assets/images/2019-01-18-nav-2.jpg){: .align-center}
 
 '들어가며' 항목을 보고 있는데도 네비게이션의 '들어가며'는 Bold 처리되지 않음.
 {: .text-center}
@@ -119,7 +119,7 @@ pop:
 
 <h2>결과</h2>
 
-![image-center](/assets/images/2019-01-18-nav-3.jpg){: .align-center}
+![image-center]({{ site.baseurl }}/assets/images/2019-01-18-nav-3.jpg){: .align-center}
 
 깔끔하게 해결
 {: .text-center}
