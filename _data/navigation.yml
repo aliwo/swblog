@@ -21,13 +21,15 @@ pop:
   - title: 파이썬 코드 스타일
     children:
       - title: "주석"
-        url: /series/principles_of_python/comment/index.html
+        url: /series/principles_of_python/comment/
       - title: "코드 블록"
-        url: /series/principles_of_python/code_block/index.html
+        url: /series/principles_of_python/code_block/
+      - title: "내가 변수의 이름을 불러주기 전에는"
+        url: /series/principles_of_python/variable/
       - title: "입력과 출력"
-        url: /series/principles_of_python/input_output/index.html
+        url: /series/principles_of_python/input_output/
       - title: "인터렉티브 Shell"
-        url: /series/principles_of_python/interactive_shell/index.html
+        url: /series/principles_of_python/interactive_shell/
 
   - title: 연산자
     children:
@@ -40,6 +42,12 @@ pop:
 
   - title: 자료형
     children:
+      - title: "정수"
+        url: /docs/authors/
+      - title: "실수"
+        url: /docs/authors/
+      - title: "문자열"
+        url: /docs/authors/
       - title: "리스트"
         url: /docs/authors/
       - title: "집합(set)"
@@ -51,6 +59,8 @@ pop:
       - title: "[Advanced]DefaultDict"
         url: /docs/navigation/
       - title: "[Advanced]리스트 컴프리헨션"
+        url: /docs/navigation/
+      - title: "[Advanced]레이저 포인터"
         url: /docs/navigation/
 
   - title: 함수
@@ -131,7 +141,7 @@ pop:
 
   - title: 부록
     children:
-      - title: "그 모든 것을 보시니 보시기에 심히 좋았더라"
+      - title: "보시기에 심히 좋았더라"
         url: /docs/stylesheets/
       - title: "초콜릿 공장 만들기"
         url: /docs/javascript/
