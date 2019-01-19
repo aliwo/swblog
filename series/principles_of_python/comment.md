@@ -4,7 +4,7 @@ date:   2019-01-14 20:21:03 +0900
 ---
 
 <h2> 사람만 읽는 코드 </h2>
-![image-center](/assets/images/meme_recaptcha.jpg){: .align-center}
+![image-center]({{ site.baseurl }}/assets/images/meme_recaptcha.jpg){: .align-center}
 
 인간은 읽을 수 있고, 로봇은(혹은 악성 프로그램은) 읽을 수 없는 이미지를 CAPTCHA(Completely Automated Public Turing test to tell Computers and Humans Apart) 라고 한다. 
 CAPTCHA라는 용어가 낯설게 느껴진다면 콘서트 예매를 할 때를 떠올려 보자(혹은 회원가입을 할 때를 떠올려도 좋다). 우리는 마지막 
