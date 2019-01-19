@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "side bar navigation 문제"
+title:  "mmistake: side bar navigation 문제"
 date:   2019-01-16 21:21:03 +0900
 categories: [jekyll]
 ---
