@@ -3,7 +3,7 @@ title:  "The Zen of Python"
 date:   2019-01-17 20:21:03 +0900
 ---
 
-<h2>import this</h2>
+## import this
 pycharm 을 켜자. 하단의 Python Console을 클릭하고 다음 문장을 기입하자. 그리고 엔터를 입력한다.
 (\>\>\> 은 여러분이 입력할 필요 없다.)
 {% highlight python %}
