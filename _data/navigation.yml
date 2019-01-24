@@ -43,19 +43,19 @@ pop:
   - title: 자료형
     children:
       - title: "정수"
-        url: /docs/authors/
+        url: /series/principles_of_python/integer/
       - title: "실수"
-        url: /docs/authors/
+        url: /series/principles_of_python/float/
       - title: "문자열"
-        url: /docs/authors/
+        url: /series/principles_of_python/str/
       - title: "리스트"
-        url: /docs/authors/
+        url: /series/principles_of_python/list/
       - title: "집합(set)"
-        url: /docs/authors/
+        url: /series/principles_of_python/set/
       - title: "튜플"
-        url: /docs/authors/
+        url: /series/principles_of_python/tuple/
       - title: "딕셔너리"
-        url: /docs/layouts/
+        url: /series/principles_of_python/dict/
       - title: "[Advanced]DefaultDict"
         url: /docs/navigation/
       - title: "[Advanced]리스트 컴프리헨션"
