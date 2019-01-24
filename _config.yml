@@ -297,5 +297,6 @@ defaults:
       path: "series"
     values:
       layout: single
+      toc: true
       sidebar:
         nav: "pop"

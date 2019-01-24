@@ -10,7 +10,7 @@ pop:
   - title: 안녕? 난 파이썬이라고 해
     children:
       - title: "들어가며"
-        url: /series/principles_of_python/intro/index.html
+        url: /series/principles_of_python/intro/
       - title: "파이썬 설치"
         url: /series/principles_of_python/install_python/
       - title: "개발환경 설치"
@@ -21,18 +21,20 @@ pop:
   - title: 파이썬 코드 스타일
     children:
       - title: "주석"
-        url: /series/principles_of_python/comment/index.html
+        url: /series/principles_of_python/comment/
       - title: "코드 블록"
-        url: /series/principles_of_python/code_block/index.html
+        url: /series/principles_of_python/code_block/
+      - title: "내가 변수의 이름을 불러주기 전에는"
+        url: /series/principles_of_python/variable/
       - title: "입력과 출력"
-        url: /docs/navigation/
+        url: /series/principles_of_python/input_output/
       - title: "인터렉티브 Shell"
-        url: /docs/ui-text/
+        url: /series/principles_of_python/interactive_shell/
 
   - title: 연산자
     children:
       - title: "산술 연산자"
-        url: /docs/authors/
+        url: /series/principles_of_python/arithmetic/
       - title: "논리 연산자"
         url: /docs/layouts/
       - title: "삼항 연산자"
@@ -40,6 +42,12 @@ pop:
 
   - title: 자료형
     children:
+      - title: "정수"
+        url: /docs/authors/
+      - title: "실수"
+        url: /docs/authors/
+      - title: "문자열"
+        url: /docs/authors/
       - title: "리스트"
         url: /docs/authors/
       - title: "집합(set)"
@@ -50,50 +58,58 @@ pop:
         url: /docs/layouts/
       - title: "[Advanced]DefaultDict"
         url: /docs/navigation/
+      - title: "[Advanced]리스트 컴프리헨션"
+        url: /docs/navigation/
+      - title: "[Advanced]레이저 포인터"
+        url: /docs/navigation/
 
   - title: 함수
     children:
       - title: "함수"
-        url: /series/principles_of_python/comment/index.html
+        url: /series/principles_of_python/comment/
       - title: "결과 리턴하기"
-        url: /series/principles_of_python/comment/index.html
+        url: /series/principles_of_python/comment/
       - title: "기억되지 못하는 자의 슬픔. 람다"
-        url: /series/principles_of_python/code_block/index.html
+        url: /series/principles_of_python/code_block/
       - title: "[Advanced] 재귀"
-        url: /series/principles_of_python/code_block/index.html
+        url: /series/principles_of_python/code_block/
       - title: "[Advanced] First Class Citizen"
-        url: /series/principles_of_python/code_block/index.html
+        url: /series/principles_of_python/code_block/
       - title: "함수를 반복한다. 제너레이터"
-        url: /series/principles_of_python/code_block/index.html
+        url: /series/principles_of_python/code_block/
+      - title: "[Tmi]제너레이터 컴프리헨션"
+        url: /docs/navigation/
 
   - title: 클래스
     children:
-      - title: "클래스와 인스턴스"
-        url: /series/principles_of_python/intro/index.html
+      - title: "객체와 클래스"
+        url: /series/principles_of_python/object/
       - title: "메소드와 self"
-        url: /series/principles_of_python/intro/index.html
+        url: /series/principles_of_python/intro/
       - title: "자식은 부모를 닮아. 상속"
-        url: /series/principles_of_python/intro/index.html
+        url: /series/principles_of_python/intro/
       - title: "단 한 번 호출되는 메소드, 생성자"
-        url: /series/principles_of_python/intro/index.html
+        url: /series/principles_of_python/intro/
       - title: "다중 상속"
-        url: /series/principles_of_python/intro/index.html
+        url: /series/principles_of_python/intro/
       - title: "[Advanced] Diamond"
-        url: /series/principles_of_python/intro/index.html
+        url: /series/principles_of_python/intro/
 
   - title: 클래스와 메소드
     children:
       - title: "Static 메소드"
-        url: /series/principles_of_python/intro/index.html
+        url: /series/principles_of_python/intro/
       - title: "Class 메소드"
-        url: /series/principles_of_python/intro/index.html
+        url: /series/principles_of_python/intro/
       - title: "__doc__"
-        url: /series/principles_of_python/intro/index.html
+        url: /series/principles_of_python/intro/
+      - title: "[Advanced] 추상화"
+        url: /series/principles_of_python/intro/
 
   - title: 모듈
     children:
       - title: "니것도 내꺼 내것도 내꺼"
-        url: /series/principles_of_python/import/index.html
+        url: /series/principles_of_python/import/
       - title: "모듈"
         url: /docs/navigation/
       - title: "공개예정"
@@ -125,13 +141,15 @@ pop:
 
   - title: 부록
     children:
-      - title: "그 모든 것을 보시니 보시기에 심히 좋았더라"
+      - title: "보시기에 심히 좋았더라"
         url: /docs/stylesheets/
       - title: "초콜릿 공장 만들기"
         url: /docs/javascript/
 
   - title: "부록2: 초콜릿 공장 만들기"
     children:
+      - title: "디자인 패턴"
+        url: /docs/posts/
       - title: "초콜릿 공장에 팻말 세우기"
         url: /docs/posts/
       - title: "좋은 카카오와 썩은 카카오"
