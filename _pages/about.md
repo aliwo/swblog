@@ -14,7 +14,7 @@ author_profile: true
 * 인천대학교 앱센터
 * 4회 유니톤 농협 은행장상
 * (전) SK 청년비상 2기 Movin’n Culture 개발자 (Arduino, Android, Flask)
-* (전) YAPP 11기 개발자, 12기 운영진
+* (전) 프로그래밍 동아리 YAPP
 * (전) 주식회사 레터플라이 (Flask, Angular)
 * (현) 사다리쿡 서버 개발자
 
