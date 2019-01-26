@@ -66,10 +66,10 @@ pop:
   - title: 함수
     children:
       - title: "함수"
-        url: /series/principles_of_python/comment/
+        url: /series/principles_of_python/func/
       - title: "결과 리턴하기"
         url: /series/principles_of_python/comment/
-      - title: "기억되지 못하는 자의 슬픔. 람다"
+      - title: "익명함수 람다"
         url: /series/principles_of_python/code_block/
       - title: "[Advanced] 재귀"
         url: /series/principles_of_python/code_block/
