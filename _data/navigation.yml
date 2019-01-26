@@ -36,9 +36,9 @@ pop:
       - title: "산술 연산자"
         url: /series/principles_of_python/arithmetic/
       - title: "논리 연산자"
-        url: /docs/layouts/
+        url: /series/principles_of_python/logic/
       - title: "삼항 연산자"
-        url: /docs/layouts/
+        url: /series/principles_of_python/ternary/
 
   - title: 자료형
     children:
