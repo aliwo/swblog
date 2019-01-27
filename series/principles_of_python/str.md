@@ -14,7 +14,7 @@ date:   2019-01-26 20:21:03 +0900
 ## 문자열의 선언
 글자를 '(따옴표) 혹은 "(쌍따옴표) 로 둘러치면 곧 문자열이 된다.
 {% highlight python %}
->>> lunch_menu = '볶음밥'
+>>> lunch_menu = '볶음밥' # "볶음밥"
 >>> lunch_menu
 볶음밥
 {% endhighlight %}
