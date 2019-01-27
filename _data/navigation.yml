@@ -40,6 +40,13 @@ pop:
       - title: "삼항 연산자"
         url: /series/principles_of_python/ternary/
 
+  - title: 반복과 조건 제어
+    children:
+      - title: "만약에"
+        url: /series/principles_of_python/
+      - title: "반복"
+        url: /series/principles_of_python/
+
   - title: 자료형
     children:
       - title: "정수"
