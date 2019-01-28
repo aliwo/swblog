@@ -24,7 +24,7 @@ pop:
         url: /series/principles_of_python/comment/
       - title: "코드 블록"
         url: /series/principles_of_python/code_block/
-      - title: "내가 변수의 이름을 불러주기 전에는"
+      - title: "변수와 변수 할당"
         url: /series/principles_of_python/variable/
       - title: "입력과 출력"
         url: /series/principles_of_python/input_output/
@@ -42,7 +42,7 @@ pop:
 
   - title: 반복과 조건 제어
     children:
-      - title: "만약에"
+      - title: "if"
         url: /series/principles_of_python/
       - title: "반복"
         url: /series/principles_of_python/
@@ -89,13 +89,15 @@ pop:
 
   - title: 클래스
     children:
+      - title: "추상화"
+        url: /series/principles_of_python/abstraction/
       - title: "객체와 클래스"
         url: /series/principles_of_python/object/
       - title: "메소드와 self"
         url: /series/principles_of_python/intro/
-      - title: "자식은 부모를 닮아. 상속"
+      - title: "상속"
         url: /series/principles_of_python/intro/
-      - title: "단 한 번 호출되는 메소드, 생성자"
+      - title: "단 한 번 호출되는 메소드. 생성자"
         url: /series/principles_of_python/intro/
       - title: "다중 상속"
         url: /series/principles_of_python/intro/
