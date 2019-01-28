@@ -42,10 +42,10 @@ pop:
 
   - title: 반복과 조건 제어
     children:
-      - title: "if"
-        url: /series/principles_of_python/
+      - title: "조건문 if"
+        url: /series/principles_of_python/if/
       - title: "반복"
-        url: /series/principles_of_python/
+        url: /series/principles_of_python/loop/
 
   - title: 자료형
     children:
