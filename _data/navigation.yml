@@ -76,6 +76,12 @@ pop:
         url: /series/principles_of_python/func/
       - title: "결과 리턴하기"
         url: /series/principles_of_python/comment/
+      - title: "디폴트 파라미터"
+        url: /series/principles_of_python/default_paramenter
+      - title: "args, kwargs"
+        url: /series/principles_of_python/arguments
+      - title: "함수도 객체입니다."
+        url: /series/principles_of_python/func_object
       - title: "익명함수 람다"
         url: /series/principles_of_python/code_block/
       - title: "[Advanced] 재귀"
