@@ -79,11 +79,11 @@ pop:
       - title: "익명함수 람다"
         url: /series/principles_of_python/code_block/
       - title: "[Advanced] 재귀"
-        url: /series/principles_of_python/code_block/
+        url: /series/principles_of_python/
       - title: "[Advanced] First Class Citizen"
-        url: /series/principles_of_python/code_block/
+        url: /series/principles_of_python/
       - title: "함수를 반복한다. 제너레이터"
-        url: /series/principles_of_python/code_block/
+        url: /series/principles_of_python/
       - title: "[Tmi]제너레이터 컴프리헨션"
         url: /docs/navigation/
 
@@ -144,7 +144,7 @@ pop:
   - title: 고급 파이썬 문법
     children:
       - title: "데코레이터"
-        url: /docs/posts/
+        url: /series/principles_of_python/decorator/
       - title: "공개예정"
         url: /docs/pages/
 
@@ -153,6 +153,8 @@ pop:
       - title: "보시기에 심히 좋았더라"
         url: /docs/stylesheets/
       - title: "초콜릿 공장 만들기"
+        url: /docs/javascript/
+      - title: "datetime 모듈, aware 와 naive"
         url: /docs/javascript/
 
   - title: "부록2: 초콜릿 공장 만들기"
