@@ -67,7 +67,7 @@ pop:
         url: /docs/navigation/
       - title: "[Advanced]리스트 컴프리헨션"
         url: /docs/navigation/
-      - title: "[Advanced]레이저 포인터"
+      - title: "[Advanced]포인터"
         url: /docs/navigation/
 
   - title: 함수
@@ -146,6 +146,13 @@ pop:
         url: /docs/helpers/
       - title: "공개예정"
         url: /docs/utility-classes/
+
+  - title: 파일 입출력
+    children:
+      - title: "파일 입출력"
+        url: /series/principles_of_python/
+      - title: "with"
+        url: /series/principles_of_python/
 
   - title: 고급 파이썬 문법
     children:
