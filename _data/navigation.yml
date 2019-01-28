@@ -158,7 +158,7 @@ pop:
     children:
       - title: "데코레이터"
         url: /series/principles_of_python/decorator/
-      - title: "공개예정"
+      - title: "프로퍼티"
         url: /docs/pages/
 
   - title: 부록
