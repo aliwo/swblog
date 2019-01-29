@@ -1,8 +1,8 @@
 main:
   - title: "파이썬의 정석"
-    url: /series/principles_of_python/intro/index.html
+    url: /series/principles_of_python/intro/
   - title: "About"
-    url: /about/
+    url: /pages/about/
   - title: "Categories"
     url: /categories/
 
@@ -24,7 +24,7 @@ pop:
         url: /series/principles_of_python/comment/
       - title: "코드 블록"
         url: /series/principles_of_python/code_block/
-      - title: "내가 변수의 이름을 불러주기 전에는"
+      - title: "변수와 변수 할당"
         url: /series/principles_of_python/variable/
       - title: "입력과 출력"
         url: /series/principles_of_python/input_output/
@@ -36,64 +36,79 @@ pop:
       - title: "산술 연산자"
         url: /series/principles_of_python/arithmetic/
       - title: "논리 연산자"
-        url: /docs/layouts/
+        url: /series/principles_of_python/logic/
       - title: "삼항 연산자"
-        url: /docs/layouts/
+        url: /series/principles_of_python/ternary/
+
+  - title: 반복과 조건 제어
+    children:
+      - title: "조건문 if"
+        url: /series/principles_of_python/if/
+      - title: "반복"
+        url: /series/principles_of_python/loop/
 
   - title: 자료형
     children:
       - title: "정수"
-        url: /docs/authors/
+        url: /series/principles_of_python/integer/
       - title: "실수"
-        url: /docs/authors/
+        url: /series/principles_of_python/float/
       - title: "문자열"
-        url: /docs/authors/
+        url: /series/principles_of_python/str/
       - title: "리스트"
-        url: /docs/authors/
+        url: /series/principles_of_python/list/
       - title: "집합(set)"
-        url: /docs/authors/
+        url: /series/principles_of_python/set/
       - title: "튜플"
-        url: /docs/authors/
+        url: /series/principles_of_python/tuple/
       - title: "딕셔너리"
-        url: /docs/layouts/
+        url: /series/principles_of_python/dict/
       - title: "[Advanced]DefaultDict"
         url: /docs/navigation/
       - title: "[Advanced]리스트 컴프리헨션"
         url: /docs/navigation/
-      - title: "[Advanced]레이저 포인터"
+      - title: "[Advanced]포인터"
         url: /docs/navigation/
 
   - title: 함수
     children:
       - title: "함수"
-        url: /series/principles_of_python/comment/
+        url: /series/principles_of_python/func/
       - title: "결과 리턴하기"
         url: /series/principles_of_python/comment/
-      - title: "기억되지 못하는 자의 슬픔. 람다"
+      - title: "디폴트 파라미터"
+        url: /series/principles_of_python/default_paramenter
+      - title: "args, kwargs"
+        url: /series/principles_of_python/arguments
+      - title: "함수도 객체입니다."
+        url: /series/principles_of_python/func_object
+      - title: "익명함수 람다"
         url: /series/principles_of_python/code_block/
       - title: "[Advanced] 재귀"
-        url: /series/principles_of_python/code_block/
+        url: /series/principles_of_python/
       - title: "[Advanced] First Class Citizen"
-        url: /series/principles_of_python/code_block/
+        url: /series/principles_of_python/
       - title: "함수를 반복한다. 제너레이터"
-        url: /series/principles_of_python/code_block/
+        url: /series/principles_of_python/
       - title: "[Tmi]제너레이터 컴프리헨션"
         url: /docs/navigation/
 
   - title: 클래스
     children:
+      - title: "추상화"
+        url: /series/principles_of_python/abstraction/
       - title: "객체와 클래스"
         url: /series/principles_of_python/object/
       - title: "메소드와 self"
         url: /series/principles_of_python/intro/
-      - title: "자식은 부모를 닮아. 상속"
+      - title: "상속"
         url: /series/principles_of_python/intro/
-      - title: "단 한 번 호출되는 메소드, 생성자"
+      - title: "단 한 번 호출되는 메소드. 생성자"
         url: /series/principles_of_python/intro/
       - title: "다중 상속"
         url: /series/principles_of_python/intro/
-      - title: "[Advanced] Diamond"
-        url: /series/principles_of_python/intro/
+      - title: "[Advanced] super"
+        url: /series/principles_of_python/super/
 
   - title: 클래스와 메소드
     children:
@@ -132,11 +147,18 @@ pop:
       - title: "공개예정"
         url: /docs/utility-classes/
 
+  - title: 파일 입출력
+    children:
+      - title: "파일 입출력"
+        url: /series/principles_of_python/
+      - title: "with"
+        url: /series/principles_of_python/
+
   - title: 고급 파이썬 문법
     children:
       - title: "데코레이터"
-        url: /docs/posts/
-      - title: "공개예정"
+        url: /series/principles_of_python/decorator/
+      - title: "프로퍼티"
         url: /docs/pages/
 
   - title: 부록
@@ -144,6 +166,8 @@ pop:
       - title: "보시기에 심히 좋았더라"
         url: /docs/stylesheets/
       - title: "초콜릿 공장 만들기"
+        url: /docs/javascript/
+      - title: "datetime 모듈, aware 와 naive"
         url: /docs/javascript/
 
   - title: "부록2: 초콜릿 공장 만들기"
