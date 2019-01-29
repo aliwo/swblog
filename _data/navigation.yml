@@ -107,8 +107,8 @@ pop:
         url: /series/principles_of_python/intro/
       - title: "다중 상속"
         url: /series/principles_of_python/intro/
-      - title: "[Advanced] Diamond"
-        url: /series/principles_of_python/intro/
+      - title: "[Advanced] super"
+        url: /series/principles_of_python/super/
 
   - title: 클래스와 메소드
     children:
