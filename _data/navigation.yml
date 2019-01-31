@@ -15,6 +15,8 @@ pop:
         url: /series/principles_of_python/install_python/
       - title: "개발환경 설치"
         url: /series/principles_of_python/install_ide/
+      - title: "첫 파이썬 프로그램"
+        url: /series/principles_of_python/first_py/
       - title: "The Zen of Python"
         url: /series/principles_of_python/zen_of_python/
 
