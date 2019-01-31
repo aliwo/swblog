@@ -3,7 +3,7 @@ title:  "주석"
 date:   2019-01-14 20:21:03 +0900
 ---
 
-<h2> 사람만 읽는 코드 </h2>
+## 사람만 읽는 코드
 ![image-center]({{ site.baseurl }}/assets/images/meme_recaptcha.jpg){: .align-center}
 
 인간은 읽을 수 있고, 로봇은(혹은 악성 프로그램은) 읽을 수 없는 이미지를 CAPTCHA(Completely Automated Public Turing test to tell Computers and Humans Apart) 라고 한다. 
@@ -27,7 +27,7 @@ CAPTCHA 처럼 매크로를 막아내는 역할은 아니지만 프로그래밍�
 * 장황한 코드가 정확히 무엇을 하기 위해 존재하는지 쉽게 설명한다.
 * 지금은 바빠서 못 했지만 나중에 해야할 작업을 TODO 주석으로 추가해 놓을 수 있다.
 
-<h2>주석 적기</h2>
+## 주석 적기
 
 파이썬의 한 줄 주석(inline comment)은 # 으로 표현한다. # 으로 시작하는 줄(Line)은 프로그램이 
 그냥 무시하고 지나간다. 마치 컴퓨터에게는 보이지 않는 것 처럼 말이다.
@@ -46,7 +46,7 @@ CAPTCHA 처럼 매크로를 막아내는 역할은 아니지만 프로그래밍�
 {% endhighlight %}
 
 
-<h2>"""</h2>
+## """
 
 여러 줄 주석을 작성할 때 """ 혹은 ''' 을 사용하라는 글을 간간히 본 적이 있다. 
 물론 정상적으로 """을 사용했다면 아무 일도 일어나지 않기 때문에 마치 주석처럼 보인다. 
@@ -66,7 +66,7 @@ CAPTCHA 처럼 매크로를 막아내는 역할은 아니지만 프로그래밍�
 {% endhighlight %}
 
 
-<h2> Ctrl + / </h2>
+## Ctrl + /
 
 주석에 적을 내용이 아무리 길다 해도 우리는 매 줄 마다 # 으로 시작하는 것 말고는 주석을 만들 방법이 없다.
 여기까지 읽고 이런 질문을 하고 싶은 분들도 있을 것이다.
@@ -85,7 +85,7 @@ Ctrl + / 을 눌러보자. 이는 블록쳐진 모든 라인을 전부 주석으
 {% endhighlight %}
 
 
-<h2>더 읽을거리 </h2>
+## 더 읽을거리
 
 파이썬 스타일 가이드: <a target="_blank" href="https://www.python.org/dev/peps/pep-0008/">
 https://www.python.org/dev/peps/pep-0008/</a>
