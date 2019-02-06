@@ -15,7 +15,9 @@ pop:
         url: /series/principles_of_python/install_python/
       - title: "개발환경 설치"
         url: /series/principles_of_python/install_ide/
-      - title: "The Zen of Python"
+      - title: "첫 파이썬 프로그램"
+        url: /series/principles_of_python/first_py/
+      - title: "[Tmi]The Zen of Python"
         url: /series/principles_of_python/zen_of_python/
 
   - title: 파이썬 코드 스타일
@@ -26,10 +28,10 @@ pop:
         url: /series/principles_of_python/code_block/
       - title: "변수와 변수 할당"
         url: /series/principles_of_python/variable/
-      - title: "입력과 출력"
-        url: /series/principles_of_python/input_output/
       - title: "인터렉티브 Shell"
         url: /series/principles_of_python/interactive_shell/
+      - title: "입력과 출력"
+        url: /series/principles_of_python/input_output/
 
   - title: 연산자
     children:

@@ -39,5 +39,27 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ![image-center]({{ site.baseurl }}/assets/images/2019-01-24-pycharm-console.jpg)
 
+## 인터프리터 실행과 스크립트 실행의 차이점
+
+크게 2가지 차이점이 있다.
+인터프리터 모드일 때
+
+* \>\>\> 이 나타난다.
+* 변수의 이름을 입력하고 Enter 를 누르는 것 만으로 변수의 값을 출력(화면에 나타난다)한다.
+{% highlight python %}
+>>> my_number = 7
+>>> my_number
+7 # 변수 안의 값 출력
+{% endhighlight %}
+
+
+보통 인터프리터 모드는 간단하게 테스트 해보고 싶은 게 있을 때 적합하고
+제대로 파이썬 프로그램을 만들때는 파일을 만들어 그 안에 작성하는게 보통이다.
+
+
+
+
+
+
 
 
