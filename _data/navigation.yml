@@ -57,6 +57,8 @@ pop:
         url: /series/principles_of_python/float/
       - title: "문자열"
         url: /series/principles_of_python/str/
+      - title: "None"
+        url: /series/principles_of_python/none/
       - title: "리스트"
         url: /series/principles_of_python/list/
       - title: "집합(set)"
@@ -76,8 +78,6 @@ pop:
     children:
       - title: "함수"
         url: /series/principles_of_python/func/
-      - title: "결과 리턴하기"
-        url: /series/principles_of_python/comment/
       - title: "디폴트 파라미터"
         url: /series/principles_of_python/default_paramenter
       - title: "args, kwargs"
