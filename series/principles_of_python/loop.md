@@ -175,13 +175,41 @@ while i < 10:
 {% endhighlight %}
 
 
+## break 반복 탈출
 
-## 무한 루프
-우리가 사용하는 거의 모든 컴퓨터 프로그램에 무한루프가 들어간다.
-예를 들어 핸드폰 어플리케이션도 
-웹 서버도 무한 루프의 일종이다.
+다음은 merchandise 음료수 목록 중에서
+포카리스웨트가 존재하는지를 검사하는 코드이다.
+만약 포카리스웨트가 존재하면 found 변수를 True 로 만든다.
+{% highlight python %}
 
+merchandise = ['파워에이드', '코카콜라', '칠성사이다', '게토레이', '포카리스웨트', '스프라이트', '핫식스']
 
+found = False
+for drink in merchandise:
+    if drink == '코카콜라':
+        found = True
+ 
+ if found:
+    print('포카리 스웨트가 있어요.')
+{% endhighlight %}
+코드의 목적은 코카콜라가 상품목록에 있는지 찾는 것인데, 일단 코드 자체는 잘 작동한다.
+하지만 한 가지 낭비를 하고 있다. 코카콜라를 찾았다면 더 이상 for 문을 반복할 필요가 없지만 
+코카콜라를 찾고 나서도 반복을 계속한다는 것이다.
+
+더 이상 반복할 필요가 없을 때에는 키워드 break 를 사용해서 반복문을 빠져나오면 된다.
+{% highlight python %}
+
+merchandise = ['파워에이드', '코카콜라', '칠성사이다', '게토레이', '포카리스웨트', '스프라이트', '핫식스']
+
+found = False
+for drink in merchandise:
+    if drink == '코카콜라':
+        found = True
+        break # 반복문 탈출!
+ 
+ if found:
+    print('포카리 스웨트가 있어요.')
+{% endhighlight %}
 
 
 
