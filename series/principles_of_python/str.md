@@ -85,3 +85,9 @@ dinner_menu = '\'어머니\'의 손맛, 된장찌개' # 에스케이핑 됨!
 {% highlight python %}
 >>> '내가 제일 좋아하는 건 피자'.replace('피자', '치킨')
 {% endhighlight %}
+
+
+## 연습문제 1
+
+<a target="_blank" href="https://py.checkio.org/en/mission/house-password/"> 링크 </a>
+
