@@ -72,22 +72,25 @@ mmistake quick 가이드를 통해 js 파일의 위치는 알게 되었다. 그 
 그렇다면 _main.js 에서 escape 된 url 문자열이 들어가는 부분을 찾으면 된다.
 
 비록 minified 되어 있긴 하지만 에러 스택과 _main.js 를 번갈아 보면서
-개발 짬밥의 감으로 대충 찍어 보았다.
-아래는 _main.js 의 일부인데...
+```markdown
+main.min.js:6 Uncaught Error: Syntax error, unrecognized expression: #%EB%B0%98%EA%B0%91%EC%8A%B5%EB%8B%88%EB%8B%A4
+    at Function.oe.error (main.min.js:6)
+    at oe.tokenize (main.min.js:6)
+    at oe.select (main.min.js:6)
+    at Function.oe [as find] (main.min.js:6)
+    at S.fn.init.find (main.min.js:6)
+    at new S.fn.init (main.min.js:6)
+    at S (main.min.js:6)
+    at Function.v.smoothScroll (main.min.js:6)
+    at main.min.js:6
+    at dispatch (main.min.js:6)
+```
+
+함수 smoothScroll 를 검색해 보았다. 아래는 _main.js 의 일부 
+
 
 ```javascript
 // 초략
-
-  // Search toggle
-  $(".search__toggle").on("click", function() {
-    $(".search-content").toggleClass("is--visible");
-    $(".initial-content").toggleClass("is--hidden");
-    // set focus on input
-    setTimeout(function() {
-      $(".search-content input").focus();
-    }, 400);
-  });
-
   // Smooth scrolling
 
   // Bind popstate event listener to support back/forward buttons.
@@ -112,12 +115,33 @@ mmistake quick 가이드를 통해 js 파일의 위치는 알게 되었다. 그 
 
 // 후략
 ```
+찾았다.
 
+**scrollTarget: location.hash,** 에서 location.hash 가 그대로 들어가는 게 문제라고 확신하게 되었다.
+그래서 
 
+```javascript
+scrollTarget: decodeURI(location.hash) // scrollTarget: location.hash,
+```
+이렇게 바꿔주었더니
+
+문제는 깔끔하게 해결. location.hash 를 사용하는 부분이 몇 개 더 있었는데, 
+해당 코드도 decodeURI 함수로 감싸 주었다.
 
 
 ## Minimal Mistake Contributor 가 되었습니다.
-히히
+
+npm 으로 빌드 했더니 깔끔하게 고쳐진 것이 확인되었다. 뿌듯하다.
+
+좋은 건 나눠가지는 거라 했던가. 이 버그 픽스를 다른 minimal mistake 사용자들도
+누려야 한다는 생각이 들었다.
+
+설레이는 마음으로 minimal mistake 깃허브에 pull request 를 날렸다.
+
+![image-center]({{ site.baseurl }}/assets/images/2019-02-14-bugfix.jpg){: .align-center}
+
+깔끔하게 merge 되었다!
+{: .text-center} 
 
 
 
