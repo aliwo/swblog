@@ -105,6 +105,8 @@ pop:
         url: /series/principles_of_python/intro/
       - title: "상속"
         url: /series/principles_of_python/intro/
+      - title: "오버라이딩"
+        url: /series/principles_of_python/override/
       - title: "단 한 번 호출되는 메소드. 생성자"
         url: /series/principles_of_python/intro/
       - title: "다중 상속"
