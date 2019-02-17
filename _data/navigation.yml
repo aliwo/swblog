@@ -51,10 +51,10 @@ pop:
 
   - title: 자료형
     children:
-      - title: "정수"
+      - title: "객체"
+        url: /series/principles_of_python/object/
+      - title: "정수와 실수"
         url: /series/principles_of_python/integer/
-      - title: "실수"
-        url: /series/principles_of_python/float/
       - title: "문자열"
         url: /series/principles_of_python/str/
       - title: "None"
@@ -98,7 +98,7 @@ pop:
       - title: "추상화"
         url: /series/principles_of_python/abstraction/
       - title: "객체와 클래스"
-        url: /series/principles_of_python/object/
+        url: /series/principles_of_python/class_and_object/
       - title: "메소드와 self"
         url: /series/principles_of_python/intro/
       - title: "상속"
