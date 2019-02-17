@@ -15,8 +15,41 @@ date:   2019-02-17 20:21:03 +0900
 이는 일반 소괄호 (연산 우선 순위를 정하는 소괄호 연산자) 와 구분하기 위함이다.
 
 
+{% highlight python %}
+>>> my_tuple = (1, 3, 2)
+{% endhighlight %}
+
+## 수정할 수 없다.
+{% highlight python %}
+>>> my_tuple[0] # my_tuple 의 0 번째 요소 1
+1
+>>> my_tuple[0] = 7 # 에러 발생!
+{% endhighlight %}
+
+한 번 생성된 튜플의 요소는 마음대로 수정할 수 없다. 
+다른 내용의 튜플이 필요하다면 새로운 튜플을 생성해야만 한다.
+
 
 ## 튜플의 연산
+튜플과 튜플을 더하려면 다음과 같이 + 기호를 사용하면 된다.
+{% highlight python %}
+>>> my_tuple = (1, 3, 2)
+>>> my_tuple2 = (4, 6, 8) 
+
+>>> my_tuple + my_tuple2
+(1, 3, 2, 4, 6, 8)
+{% endhighlight %}
+
+여러 번 강조했지만, 튜플은 한 번 생성되면 그 내용을 수정할 수 없다.
+따라서 my_tuple + my_tuple2 는 my_tuple 의 내용이 변경되어서 만들어진 것이 아니라
+**새로운 튜플**이 생성된 것이다.
+연산 이후에 my_tuple 을 출력해 보면 
+my_tuple 은 전혀 변하지 않았음을 확인할 수 있다.
+
+{% highlight python %}
+>>> my_tuple # 변화 없음
+(1, 3, 2)
+{% endhighlight %}
 
 
 
