@@ -39,6 +39,8 @@ pop:
         url: /series/principles_of_python/arithmetic/
       - title: "논리 연산자"
         url: /series/principles_of_python/logic/
+      - title: "비교 연산자"
+        url: /series/principles_of_python/comparison_operator/
       - title: "삼항 연산자"
         url: /series/principles_of_python/ternary/
 

@@ -14,11 +14,11 @@ dinner = '돈까스' if lunch_menu == '라면' else '라면'
 print(dinner) # '돈까스' 출력
 
 # if 조건문 버전
-if lunch == '라면'
+if lunch_menu == '라면':
     dinner = '돈까스'
-else
+else:
     dinner = '라면'
-print(dinner)
+print(dinner) # '돈까스' 출력
 {% endhighlight %}
 
 삼항 연산자 버전, if 조건문 버전 둘은 똑같은 기능을 한다. 점심이 라면 이었다면
