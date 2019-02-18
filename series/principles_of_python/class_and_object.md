@@ -83,10 +83,69 @@ print(my_sponge_bob.is_sponge)
 모든 스폰지밥은(스폰지밥, 그림밥, 파이썬밥) 모두 네모 모양이고, 네모 바지에, 넥타이를 입도록 정의했다.
 
 
+## 메소드
+클래스가 갖고 있는 변수를 '클래스 변수' (혹은 클래스 멤버 변수) 라고 부르는 것 처럼
+클래스가 갖고 있는 함수를 부를 떄에는 '메소드'(method) 라고 한다.
+메소드는 객체가 갖게 될 '능력' 을 정의한다. 시험 삼아 스폰지밥 클래스에
+햄버거를 만드는 기능을 추가해 보자. 
+
+
+{% highlight python %}
+class SpongeBob:
+    figure = '네모 모양'
+    pants = '네모 바지'
+    is_sponge = True
+    
+    def cook(self):
+        print('버거를 만들어요!')
+    
+my_sponge_bob = SpongeBob()
+my_sponge_bob.cook()
+{% endhighlight %}
+
+함수를 정의하던 것 처럼 메소드도 def 키워드를 사용해서 정의한다.
+메소드는 가장 첫 번째 파라미터로 self 를 전달 받는데,
+이 self 는 '자기 자신' 을 의미한다.
+즉 내부적으로는 my_sponge_bob.cook(my_sponge_bob) 이 일어난 것과 같다.
+이 self 가 있기 때문에 메소드 안에서 객체의 멤버 변수에 쉽게 접근할 수 있다. 
+
+
+## 메소드에서 self 접근하기
+
+스폰지밥에게 자기 소개를 시켜 보겠다.
+
+{% highlight python %}
+class SpongeBob:
+    figure = '네모 모양'
+    pants = '네모 바지'
+    is_sponge = True
+    
+    def cook(self):
+        print('버거를 만들어요!')
+        
+    def self_introduce(self):
+        if self.pants == '네모 바지' and self.is_sponge:
+            print('나는 네모 바지 스폰지밥이야!')
+        if self.pants != '네모 바지':
+            print('내 바지 어디갔어?')
+    
+my_sponge_bob = SpongeBob()
+my_sponge_bob.self_introduce()
+
+my_sponge_bob.pants = '바지'
+my_sponge>bob.self_introduce()
+
+{% endhighlight %}
+
+스폰지밥의 pants 값에 따라 다른 print() 문이 실행되도록 만들어 보았다.
+이런식으로 메소드 안에서 자신의 멤버 변수에 접근할 때에는 self 를 사용한다.
+
+
+
 ## 멤버 접근 연산자 .
 
 **my_sponge_bob.변수_이름** 의 . 은 '멤버 접근 연산자' 라고 부른다.
-객체 안에 있는 특성에 접근할 수 있다.
+객체 안에 있는 특성에 접근할떄 사용한다.
 
 
 
