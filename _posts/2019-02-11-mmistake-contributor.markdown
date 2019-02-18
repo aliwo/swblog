@@ -2,6 +2,7 @@
 layout: single
 title:  "Minimal Mistake 버그 픽스"
 date:   2019-02-01 09:21:03 +0900
+categories: [minimal-mistake]
 --- 
 
 
