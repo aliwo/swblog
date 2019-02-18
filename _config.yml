@@ -19,13 +19,13 @@ locale                   : "ko-KR"
 title                    : "SWblog"
 title_separator          : "-"
 name                     : "SeungWon Jeong"
-description              : "An amazing website."
+description              : "SW's Software blog"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/swblog" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+words_per_minute         : 300
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "정승원"
   avatar           : "/assets/images/var_name_meme.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "코드에서부터 감성이 우러나온다는 <br> 문과 출신 개발자."
+  bio              : "코드에서부터 감성이 우러나온다는 <br> 문과 개발자."
   location         : "Ilsan, Goyang-si"
   email            : "aliwo@naver.com"
   links:
