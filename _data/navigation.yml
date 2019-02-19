@@ -80,12 +80,16 @@ pop:
     children:
       - title: "함수"
         url: /series/principles_of_python/func/
+      - title: "변수의 스코프"
+        url: /series/principles_of_python/scope/
+      - title: "mutable 과 immutable"
+        url: /series/principles_of_python/immutable
       - title: "디폴트 파라미터"
         url: /series/principles_of_python/default_paramenter
       - title: "[Advanced] First Class Citizen"
         url: /series/principles_of_python/first_class_citizen
       - title: "익명함수 람다"
-        url: /series/principles_of_python/code_block/
+        url: /series/principles_of_python/lambda/
       - title: "[Advanced] 재귀"
         url: /series/principles_of_python/
       - title: "함수를 반복한다. 제너레이터"
