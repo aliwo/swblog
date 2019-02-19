@@ -1,45 +1,46 @@
-class SpongeBob:
-    figure = '네모 모양'
-    pants = '네모 바지'
-    is_sponge = True
+def my_func(a, b, c):
+    pass
 
-    def cook(self):
-        print('버거를 만들어요!')
+def my_func2(a=1, b=2, c=3):
+    pass
 
-    def self_introduce(self):
-        if self.pants == '네모 바지' and self.is_sponge:
-            print('나는 네모 바지 스폰지밥이야!')
-        if self.pants != '네모 바지':
-            print('내 바지 어디갔어?')
+def my_func3(a, b=2):
+    pass
 
-
-my_sponge_bob = SpongeBob()
-my_sponge_bob.self_introduce()
-
-my_sponge_bob.pants = '바지'
-my_sponge_bob.self_introduce()
-
+def my_func4(a=1, b): # 에러!!
+    pass
 
 
 
 class DolceLatte:
 
-    def __init__(self, shot, syrup, milk, ice, whip):
+    def __init__(self, shot, syrup, milk, ice, whip, *args):
         self.shot = shot # 1 ~ 5 숫자
         self.syrup = syrup # 1 ~ 5 숫자
         self.milk = milk # '일반', '저지방', '무지방', '두유'
         self.ice = ice # True 혹은 False
         self.whip = whip # True 혹은 False
 
+        print(type(args))
+        self.almond = args.count('아몬드')
+        self.cashnut = args.count('캐슈넛')
+        self.walnut = args.count('호두')
 
-orders = [(2, 3, '두유', True, True), (4, 1, '저지방', False, False)] # 계속...
 
-lattes = []
-for order in orders:
-    latte = DolceLatte(*order)
-    lattes.append(latte)
+nut_dolce_latte = DolceLatte(4, 1, '저지방', False, False, '아몬드', '아몬드', '호두')
 
-print(lattes)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

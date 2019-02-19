@@ -102,7 +102,7 @@ pop:
       - title: "생성자"
         url: /series/principles_of_python/constructor/
       - title: "random 모듈"
-        url: /series/principles_of_python/intro/
+        url: /series/principles_of_python/random_module/
       - title: "상속"
         url: /series/principles_of_python/intro/
       - title: "오버라이딩"
