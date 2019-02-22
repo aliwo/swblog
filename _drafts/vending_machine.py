@@ -63,8 +63,15 @@ print(numbers) # [0, 1, 2, 8]
 
 
 
+class MyClass:
 
+    @classmethod
+    def my_class_method(cls, a):
+        print(a)
 
+    @staticmethod
+    def my_static_method(b):
+        print(b)
 
 
 
