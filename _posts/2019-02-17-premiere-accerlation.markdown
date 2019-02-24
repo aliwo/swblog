@@ -11,8 +11,7 @@ premiere 설치 권장사항에 포함된 몇 개의 하이엔드 그래픽 카�
 
 필자도 렌더러의 선택 박스가 비활성화 된 상태로, 'Mercury 재생 엔진 소프트웨어 전용' 으로 강제되어 있었다.
 
-![image-center]({{ site.baseurl }}/assets/images/2019-02-20-premiere-accerlation-01.jpg){: .align-center}
-
+``
 'Mercury 재생 엔진 소프트웨어 전용' 밖에 선택할 수 없다면, GPU 가속이 안 되고 있는 상황이다.
 {: .text-center }
 

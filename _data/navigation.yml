@@ -118,10 +118,8 @@ pop:
 
   - title: 클래스와 메소드
     children:
-      - title: "Static 메소드"
-        url: /series/principles_of_python/intro/
-      - title: "Class 메소드"
-        url: /series/principles_of_python/intro/
+      - title: "Static 메소드와 Class 메소드"
+        url: /series/principles_of_python/static_method/
       - title: "__doc__"
         url: /series/principles_of_python/intro/
       - title: "[Advanced] 추상화"
