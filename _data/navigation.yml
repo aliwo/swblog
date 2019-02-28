@@ -2,7 +2,7 @@ main:
   - title: "파이썬의 정석"
     url: /series/principles_of_python/intro/
   - title: "About"
-    url: /pages/about/
+    url: /pages/about
   - title: "Categories"
     url: /categories/
 
