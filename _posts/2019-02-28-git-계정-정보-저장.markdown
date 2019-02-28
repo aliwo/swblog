@@ -1,0 +1,31 @@
+---
+layout: single
+title:  "Git 계정 정보 저장하기"
+date:   2019-02-28 12:10:03 +0900
+categories: [premiere]
+--- 
+
+## git 계정 정보 저장하기
+
+git 을 사용해서 github 로 부터 pull 을 받을 때
+늘 깃허브 아이디와 비밀번호를 치곤 했다.
+(평소엔 소스트리를 쓰므로) 터미널을 써야할 때에만 가끔 쓰던 방식이었다.
+근데 이게 불편해서 계정정보를 저장하는 방법을 구글링해 보았다.
+
+
+다음 커맨드를 입력하면 git 이 계정 정보를 저장하기 시작하는 모양이다. 
+<br>
+`$ git config --global credential.helper store`
+
+그리고 정상적으로 git pull 을 한다. 
+`$ git pull`
+
+git pull 시에 입력했던 계정정보가 저장되므로, 다음 번 pull 시에는
+더이상 계정 정보를 입력할 필요가 없다.
+
+
+
+
+
+
+
