@@ -69,12 +69,8 @@ pop:
         url: /series/principles_of_python/tuple/
       - title: "딕셔너리"
         url: /series/principles_of_python/dict/
-      - title: "[Advanced]DefaultDict"
-        url: /docs/navigation/
       - title: "[Advanced]리스트 컴프리헨션"
-        url: /docs/navigation/
-      - title: "[Advanced]포인터"
-        url: /docs/navigation/
+        url: /series/principles_of_python/list_comprehension/
 
   - title: 함수
     children:

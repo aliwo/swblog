@@ -45,6 +45,9 @@ merchandise = ['파워에이드', '코카콜라', '칠성사이다', '게토레�
 
 
 
+## 연습 문제
+
+<a href="https://py.checkio.org/en/mission/sort-array-by-element-frequency/" target="_blank">링크</a>
 
 
 
