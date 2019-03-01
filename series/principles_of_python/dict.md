@@ -9,11 +9,13 @@ date:   2019-01-19 20:21:03 +0900
 ![image-center]({{ site.baseurl }}/assets/images/doraemong.jpg){: .align-center}
 
 진구 曰:“도라에몽, 날도 추운데 모히또 가서 몰디브나 한 잔 할까?”
-<br><br>
+{: .text-center}
+
 도라에몽 曰: "좋아~"
-<br><br>
+{: .text-center}
+
 도라에몽은 자신의 도구 주머니에서 ‘어디로든지 문’을 찾기 시작한다.
-도라에몽은 도구 주머니는 리스트 타입으로 되어 있다.
+도라에몽의 도구 주머니는 리스트 타입으로 되어 있다.
 
 {% highlight python %}
 

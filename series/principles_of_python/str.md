@@ -90,4 +90,5 @@ dinner_menu = '\'어머니\'의 손맛, 된장찌개' # 에스케이핑 됨!
 ## 연습문제 1
 
 <a target="_blank" href="https://py.checkio.org/en/mission/house-password/"> 링크 </a>
+<a target="_blank" href="https://py.checkio.org/en/mission/bird-language/"> 링크2 </a>
 
