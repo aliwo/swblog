@@ -155,9 +155,34 @@ print(merchandise[0:3]) # merchandise 의 0 번째 요소 부터 3-1(2) 까지�
 앞서 리스트 슬라이싱은 '새로운 리스트'를 만드는 것이라고 했다. 그 말 대로 리스트 슬라이싱은 새로운 리스트를 만들기 때문에
 기존 리스트에는 수정을 가하지 않는다.
 
+다음 예제를 보자.
+
+{% highlight python %}
+merchandise = ['파워에이드', '코카콜라', '칠성사이다', '게토레이', '포카리스웨트', '스프라이트', '핫식스']
+soft_drinks = [] # 탄산음료로만 구성될 새로운 리스트
+
+for drink in merchandise[:]: # merchandise[:] 는 리스트 전체를 복사한다.
+    if drink in ['스프라이트', '핫식스', '코카콜라', '칠성사이다', ]:
+        soft_drinks.append(drink)
+    
+print(soft_drinks) # ['코카콜라', '칠성사이다', '스프라이트', '핫식스'] 
+
+{% endhighlight %}
 
 
+기존 리스트를 솎아내는 작업 (리스트의 일부 요소만 뗴어 내서 새로운 리스트를 만들어야 할 때)
+을 할 때에는 반드시 기존 리스트를 복사해야 하고, 그 결과를 새로운 리스트(soft_drinks)에 담는 것이 안전하다.
+다음 예제를 보면 그 이유를 알 수 있다. 
 
+{% highlight python %}
+merchandise = ['파워에이드', '코카콜라', '칠성사이다', '게토레이', '포카리스웨트', '스프라이트', '핫식스']
+
+for drink in merchandise:  # 주의! 복사를 하지 않았을 경우
+    if drink in ['스프라이트', '핫식스', '코카콜라', '칠성사이다', ]:
+        merchandise.remove(drink)
+
+print(merchandise)
+{% endhighlight %}
 
 
 
