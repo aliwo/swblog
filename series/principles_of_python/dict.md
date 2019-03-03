@@ -32,7 +32,7 @@ gadget_list = [
     '로빈슨 크루소 세트',
     '어디로든지 문'
     '로켓 빨대',
-    '빅 라이트',
+    '빅 라이트'
 ]
 
 {% endhighlight %}
@@ -142,4 +142,13 @@ print('대나무 헬리콥터' in gadget_dict) # True
 gadget_dict.pop('대나무 헬리콥터')
 print('대나무 헬리콥터' in gadget_dict) # False
 {% endhighlight %}
+
+
+## 참고
+
+dict 에서 마지막 , 는 무시된다. (다음 요소가 없을 경우)
+
+
+<!-- TODO value 값에 문자열 대신 객체 넣기 -->
+
 
