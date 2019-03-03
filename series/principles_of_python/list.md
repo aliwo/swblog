@@ -68,7 +68,7 @@ merchandise = ['파워에이드', '코카콜라', '칠성사이다', '게토레�
 merchandise.append('데자와')
 merchandise.append('마운틴듀')
 
-print(merchandise)
+print(merchandise) # ['파워에이드', '코카콜라', '칠성사이다', '게토레이', '포카리스웨트', '스프라이트', '핫식스', '데자와', '마운틴듀']
 
 {% endhighlight %}
 
@@ -93,7 +93,7 @@ print(merchandise[6]) # merchandise 리스트의 6 번째 요소, 핫식스
 리스트 각 요소에 매겨진 순서를 인덱스`index` 라고 부른다.
 
 
-## ()뒤에서 부터) 리스트 요소에 접근
+## (뒤에서 부터) 리스트 요소에 접근
 뒤에서 부터 리스트 요소에 접근할 수도 있다. 인덱스가 각각
 * -1 일때, 맨 뒤에서 첫 번째 요소에 접근한다.
 * -2 일때 맨 뒤에서 두 번째 요소에 접근한다.
@@ -114,12 +114,62 @@ print(merchandise[-2]) # merchandise 리스트의 뒤에서 두 번째 요소, �
 
 ## 리스트 요소의 탐색 
 
-for 문을 사용해서 리스트의 요소를 
+for 문을 사용해서 리스트의 요소를 순회하려면 다음과 같이 한다.
 
+{% highlight python %}
+# 자판기의 음료수 목록
+merchandise = ['파워에이드', '코카콜라', '칠성사이다', '게토레이', '포카리스웨트', '스프라이트', '핫식스']
 
+for drink in merchandise:
+    print(drink)
+{% endhighlight %}
+
+인덱스를 사용해 리스트의 요소에 접근할 수 있다는 점을 이용하면 이렇게도 만들 수 있다.
+{% highlight python %}
+for i in range(0, len(merchandise)) # len(merchandise) = merchandise 리스트의 길이
+    print(merchandise[i])
+{% endhighlight %}
 
 
 ## 리스트 슬라이싱
+파이썬은 튜플, 문자열, 리스트 등의 자료형에 슬라이싱 기능을 지원한다.
+리스트의 일부 요소만 떼어내 새로운 리스트를 만드는 것을 리스트 슬라이싱 이라고 한다.
+먼저 예제를 보자.
+{% highlight python %}
+merchandise = ['파워에이드', '코카콜라', '칠성사이다', '게토레이', '포카리스웨트', '스프라이트', '핫식스']
+
+print(merchandise[0:1]) # merchandise 의 0 번째 요소 부터 1-1(0) 까지의 요소를 가진 새 리스트를 만든다.
+# ['파워에이드']
+print(merchandise[0:3]) # merchandise 의 0 번째 요소 부터 3-1(2) 까지의 요소를 가진 새 리스트를 만든다.
+# ['파워에이드', '코카콜라', '칠성사이다']
+{% endhighlight %}
+
+리스트 슬라이싱의 문법은 다음과 같다.
+
+**리스트[<시작 인덱스>:<끝 인덱스>]** 
+{: .text-center}
+
+
+
+## 리스트 슬라이싱과 리스트의 복사
+앞서 리스트 슬라이싱은 '새로운 리스트'를 만드는 것이라고 했다. 그 말 대로 리스트 슬라이싱은 새로운 리스트를 만들기 때문에
+기존 리스트에는 수정을 가하지 않는다.
+
+
+
+
+
+
+
+## 연습 문제 1
+
+다음 코드의 잘못된 부분을 찾아서 고쳐보세요
+{% highlight python %}
+merchandise = ['파워에이드', '코카콜라', '칠성사이다', '게토레이', '포카리스웨트', '스프라이트', '핫식스']
+merchandise.append['데자와']
+{% endhighlight %}
+
+
 
 
 ## 연습 문제
