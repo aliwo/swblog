@@ -171,12 +171,3 @@ pop:
         url: /docs/javascript/
       - title: "datetime 모듈, aware 와 naive"
         url: /docs/javascript/
-
-  - title: "부록2: 정규표현식"
-    children:
-      - title: "정규표현식 시작하기"
-        url: /series/principles_of_python/regex_intro
-      - title: "초콜릿 공장에 팻말 세우기"
-        url: /docs/posts/
-      - title: "좋은 카카오와 썩은 카카오"
-        url: /docs/pages/

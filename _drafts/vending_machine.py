@@ -1,23 +1,31 @@
-nums = [1, 2, 3, 4]
-fruit = ["Apples", "Peaches", "Pears", "Bananas"]
-print([(i, f) for i in nums for f in fruit])
-# 출력 결과
-# [(1, 'Apples'), (1, 'Peaches'), (1, 'Pears'), (1, 'Bananas'),
-# (2, 'Apples'), (2, 'Peaches'), (2, 'Pears'), (2, 'Bananas'),
-# (3, 'Apples'), (3, 'Peaches'), (3, 'Pears'), (3, 'Bananas'),
-# (4, 'Apples'), (4, 'Peaches'), (4, 'Pears'), (4, 'Bananas')]
+merchandise = ['파워에이드', '코카콜라', '칠성사이다', '게토레이', '포카리스웨트', '스프라이트', '핫식스']
 
+for drink in merchandise:  # 주의! 복사를 하지 않았을 경우
+    if drink not in ['스프라이트', '핫식스', '코카콜라', '칠성사이다', ]:
+        merchandise.remove(drink)
 
-result = []
-nums = [1, 2, 3, 4]
-fruit = ["Apples", "Peaches", "Pears", "Bananas"]
+print(merchandise)
 
-for i in nums:
-    for f in fruit:
-        result.append((i, f))
-
-
-print(result)
+# nums = [1, 2, 3, 4]
+# fruit = ["Apples", "Peaches", "Pears", "Bananas"]
+# print([(i, f) for i in nums for f in fruit])
+# # 출력 결과
+# # [(1, 'Apples'), (1, 'Peaches'), (1, 'Pears'), (1, 'Bananas'),
+# # (2, 'Apples'), (2, 'Peaches'), (2, 'Pears'), (2, 'Bananas'),
+# # (3, 'Apples'), (3, 'Peaches'), (3, 'Pears'), (3, 'Bananas'),
+# # (4, 'Apples'), (4, 'Peaches'), (4, 'Pears'), (4, 'Bananas')]
+#
+#
+# result = []
+# nums = [1, 2, 3, 4]
+# fruit = ["Apples", "Peaches", "Pears", "Bananas"]
+#
+# for i in nums:
+#     for f in fruit:
+#         result.append((i, f))
+#
+#
+# print(result)
 
 
 #
