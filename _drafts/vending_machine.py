@@ -1,10 +1,49 @@
-merchandise = ['파워에이드', '코카콜라', '칠성사이다', '게토레이', '포카리스웨트', '스프라이트', '핫식스']
+import asyncio
+import time
 
-for drink in merchandise:  # 주의! 복사를 하지 않았을 경우
-    if drink not in ['스프라이트', '핫식스', '코카콜라', '칠성사이다', ]:
-        merchandise.remove(drink)
+import asyncio
+import time
 
-print(merchandise)
+async def say_after(delay, what):
+    await asyncio.sleep(delay)
+    print(what)
+
+async def main():
+    print(f"started at {time.strftime('%X')}")
+
+    await say_after(1, 'hello')
+    await say_after(2, 'world')
+
+    print(f"finished at {time.strftime('%X')}")
+
+asyncio.run(main())
+
+# import asyncio
+# import time
+#
+# async def say_after(delay, what):
+#     await asyncio.sleep(delay)
+#     print(what)
+#
+# async def main():
+#     print(f"started at {time.strftime('%X')}")
+#
+#     await say_after(1, 'hello')
+#     await say_after(2, 'world')
+#
+#     print(f"finished at {time.strftime('%X')}")
+#
+# asyncio.run(main())
+
+
+
+# merchandise = ['파워에이드', '코카콜라', '칠성사이다', '게토레이', '포카리스웨트', '스프라이트', '핫식스']
+#
+# for drink in merchandise:  # 주의! 복사를 하지 않았을 경우
+#     if drink not in ['스프라이트', '핫식스', '코카콜라', '칠성사이다', ]:
+#         merchandise.remove(drink)
+#
+# print(merchandise)
 
 # nums = [1, 2, 3, 4]
 # fruit = ["Apples", "Peaches", "Pears", "Bananas"]

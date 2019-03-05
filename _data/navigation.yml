@@ -79,17 +79,17 @@ pop:
       - title: "변수의 스코프"
         url: /series/principles_of_python/scope/
       - title: "mutable 과 immutable"
-        url: /series/principles_of_python/immutable
+        url: /series/principles_of_python/immutable/
       - title: "디폴트 파라미터"
-        url: /series/principles_of_python/default_paramenter
+        url: /series/principles_of_python/default_paramenter/
       - title: "[Advanced] First Class Citizen"
-        url: /series/principles_of_python/first_class_citizen
+        url: /series/principles_of_python/first_class_citizen/
       - title: "익명함수 람다"
         url: /series/principles_of_python/lambda/
       - title: "[Advanced] 재귀"
         url: /series/principles_of_python/
-      - title: "함수를 반복한다. 제너레이터"
-        url: /series/principles_of_python/
+      - title: "제너레이터"
+        url: /series/principles_of_python/generator/
       - title: "[Tmi]제너레이터 컴프리헨션"
         url: /docs/navigation/
 
@@ -162,6 +162,8 @@ pop:
         url: /series/principles_of_python/decorator/
       - title: "프로퍼티"
         url: /docs/pages/
+      - title: "async await"
+        url: /series/principles_of_python/async_await/
 
   - title: 부록
     children:
