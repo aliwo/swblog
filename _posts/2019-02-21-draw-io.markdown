@@ -2,7 +2,6 @@
 layout: single
 title:  "draw.io 사용하기"
 date:   2019-02-21 20:10:03 +0900
-categories: [premiere]
 --- 
 
 <!-- TODO: 내용 채우기 -->

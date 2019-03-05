@@ -2,7 +2,7 @@
 layout: single
 title:  "Bash Shell Programming 기초"
 date:   2019-02-28 16:10:03 +0900
-categories: [premiere]
+categories: [ubuntu, linux]
 --- 
 
 ## 개요

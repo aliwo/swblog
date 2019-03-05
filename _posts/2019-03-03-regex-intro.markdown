@@ -2,7 +2,7 @@
 layout: single
 title:  "Hello 정규 표현식"
 date:   2019-03-03 16:10:03 +0900
-categories: [premiere]
+categories: [regex]
 --- 
 
 ## 정규 표현식이란

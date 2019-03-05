@@ -2,7 +2,7 @@
 layout: single
 title:  "windows 에서 mysql 설정 파일을 찾아 떠나는 여행"
 date:   2019-03-03 16:10:03 +0900
-categories: [premiere]
+categories: [mysql]
 --- 
 
 ## 도움이 된 글

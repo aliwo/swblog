@@ -2,7 +2,7 @@
 layout: single
 title:  "Git 계정 정보 저장하기"
 date:   2019-02-28 12:10:03 +0900
-categories: [premiere]
+categories: [git]
 --- 
 
 ## git 계정 정보 저장하기
