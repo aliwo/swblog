@@ -12,6 +12,9 @@ attributeerror: module 'importlib._bootstrap' has no attribute 'sourcefileloader
 
 위에 보이는 에러 문구를 해결하기 위해 오신 모든 개발자 분들. 환영한다.
 
+**주의:** 뒤늦게 ubuntu 14 에서는 python3.7 을 빌드할 떄 에러가 날 수 있다는 걸 알았습니다.
+본 문서는 outdated 되었습니다... 나중에 ubuntu 16 으로 제대로 깔아보겠습니다. 
+{: .notice--info}
 
 ## 발단
 우분투(14 기준)는 기본적으로 python3이 python3.4 버전으로 깔려 있고,
@@ -97,7 +100,7 @@ alias 를 지어두는게 정신 건강에 좋다. alias 없이 명령어를 실
 sudo apt install python3-pip
 sudo apt install python3.7-venv
 python -m venv venv
-. venv/bin/activate
+source venv/bin/activate
 ```
 
 이제 `pip --version` 을 입력해본다.
@@ -123,14 +126,34 @@ $ wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tar.xz
 이렇게 tar.xz 소스파일을 직접 받아서 빌드를 권장하는 글이 있다.
 본인의 리눅스 인스턴스가 극강의 성능을 자랑한다면 해 볼 만하지만,
 싱글 코어 서버로는 정말 한나절이 걸리니 비추한다.
+그리고 다음과 같은 에러도 뜬다.
+```
+./python -E -S -m sysconfig --generate-posix-vars ;\
+        if test $? -ne 0 ; then \
+                echo "generate-posix-vars failed" ; \
+                rm -f ./pybuilddir.txt ; \
+                exit 1 ; \
+        fi
+Fatal Python error: _PySys_BeginInit: can't initialize sys module
 
+Current thread 0x00002ba95b277e00 (most recent call first):
+Aborted (core dumped)
+generate-posix-vars failed
+make[1]: *** [pybuilddir.txt] Error 1
+make[1]: Leaving directory `/home/ubuntu/tmps/Python-3.7.0'
+make: *** [profile-opt] Error 2
+(venv) ubuntu@dev1:~/tmps/Python-3.7.0$ 
+
+```
 
 
 
 ## 참고
 https://github.com/pypa/virtualenv/issues/1059
+
 https://stackoverflow.com/questions/42558133/upgrading-python3-4-to-python3-6-on-ubuntu-breaks-pip/44354166#44354166
 
+https://stackoverflow.com/questions/53070868/how-to-install-python3-7-and-create-a-virtualenv-with-pip-on-ubuntu-18-04
 
  
  
