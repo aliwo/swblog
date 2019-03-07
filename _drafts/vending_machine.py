@@ -1,18 +1,26 @@
 import asyncio
 import time
 
-import asyncio
-import time
-
-async def say_after(delay, what):
+async def return_after(delay, what):
     await asyncio.sleep(delay)
     print(what)
+    return what
 
 async def main():
+
+    task1 = asyncio.create_task(
+        return_after(3, 'hello'))
+
+    task2 = asyncio.create_task(
+        return_after(1, 'world'))
+
     print(f"started at {time.strftime('%X')}")
 
-    await say_after(1, 'hello')
-    await say_after(2, 'world')
+    my_world = await task2
+    print(f"line 21 at {time.strftime('%X')}")
+
+    print('do something #2')
+    print('do something #3')
 
     print(f"finished at {time.strftime('%X')}")
 
