@@ -86,6 +86,7 @@ python3.7 --version
 파일 명 .bash_aliases 를 사용자의 home 에 위치시킨 후, ssh 를 끊고 다시 접속한다.
 ``` bash
 alias python=python3.7
+alias pip=pip3
 ```
 python2를 써야만 하는 정말 특별한 이유가 없다면
 alias 를 지어두는게 정신 건강에 좋다. alias 없이 명령어를 실행하면 수 많은 에러를 맛 보게
