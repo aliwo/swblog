@@ -1,0 +1,72 @@
+---
+layout: single
+title:  "정규 표현식: "
+date:   2019-03-03 16:10:03 +0900
+categories: [regex]
+--- 
+
+## 문자열 매치
+표현식에 간단하게 '시공' 만 입력하면 Text 중 '시공' 에 모두 매치된다.
+
+![image-center]({{ site.baseurl }}/assets/images/2019-03-08-regex-03.jpg){: .align-center}
+
+
+## 문자 클래스
+
+이번에는 '시아' 를 Expression 에 입력하고 무엇이 매치되는지 살펴보자.
+
+![image-center]({{ site.baseurl }}/assets/images/2019-03-08-regex-04.jpg){: .align-center}
+
+
+시공조아에는 '시아'가 없기 때문에 아무것도 매치되지 않는다. 이 상태에서
+'시아'의 양쪽 끝에 대괄호를 씌워보자. 
+
+![image-center]({{ site.baseurl }}/assets/images/2019-03-08-regex-05.jpg){: .align-center}
+
+시공조아의 양쪽 끝의 '시'와 '아' 가 매치되었다. 문자 클래스인 **문자 집합(character set)**을 사용하였기 때문이다.
+문자 집합은 정규표현식에서 []로 둘러쌓인 부분을 말하는데, []안에 둘러 쌓인 모든 글자와
+매치된다. 
+
+따라서 [시아] 의 의미는 "**시** 와 **아** 에 매치하겠다" 라는 뜻이 된다. 
+
+![image-center]({{ site.baseurl }}/assets/images/2019-03-08-regex-06.jpg){: .align-center}
+
+참고로 문자 집합 안의 순서는 중요하지 않다, "[시아]" 와 "[아시]" 는 똑같은 의미이다.
+
+
+## range 사용하기
+문자 집합에 - 를 사용하면 '범위' 를 의미한다.
+
+[0-9] 모든 아라비아 숫자
+
+
+## 문자 클래스의 축약
+아래 문자 클래스의 의미는 각각 다음과 같다.
+
+* \d : 모든 숫자
+* \w : 문자(알파벳 대소문자, 숫자, _ 언더스코어) (한글은 미포함)
+* \s : 공백 문자(spacebar, tab, enter)
+
+
+
+## 그룹(Group)
+
+주민번호는 생년월일과 뒤에 오는 7자리의 일련번호로 이루어진다.
+주민번호를 매치하되, 생년월일을 하나로 묶고, 나머지 일련번호를 또 다른 하나로
+묶으려면 그룹을 사용한다.
+
+![image-center]({{ site.baseurl }}/assets/images/2019-03-08-regex-07.jpg){: .align-center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
