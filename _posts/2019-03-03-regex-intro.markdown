@@ -95,7 +95,7 @@ regex의 Expression 탭에 아래 정규표현식을 복사해서 넣어보자.
 
 
 ## 그 다음
-<a href="http://localhost:4000/swblog/regex/regex2">다음 포스트에서 계속</a>
+<a href="{{ site.baseurl }}/regex/regex2">다음 포스트에서 계속</a>
 
 
 
