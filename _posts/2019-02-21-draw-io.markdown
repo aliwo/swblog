@@ -4,14 +4,19 @@ title:  "draw.io 사용하기"
 date:   2019-02-21 20:10:03 +0900
 --- 
 
-<!-- TODO: 내용 채우기 -->
-
 
 ## 예쁘장한 diagram tool 발견!
 
+* <a href="https://about.draw.io/" target="_blank">About 페이지</a>
+* <a href="https://www.draw.io/" target="_blank">직접 해보기</a>
+
 ![image-center]({{ site.baseurl }}/assets/images/2019-02-21-diagram-01.jpg){: .align-center}
 
+## draw.io
+한 눈에 봐도 예쁘고
 
+저장도 간편하네요. 블로그 할 때 많이 쓸 것 같아요~
+![image-center]({{ site.baseurl }}/assets/images/2019-05-03-draw-io.jpg){: .align-center}
 
 
 
