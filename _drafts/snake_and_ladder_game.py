@@ -55,7 +55,7 @@ event_loop = [Route()]
 
 while(True):
     loop_run += 1
-    for route in event_loop[:]: # event loop 를 run 중에 수정하기 때문에 복사를 써야 합니다.TODO: 개선할 수 있을까?
+    for route in event_loop[:]: # event loop 를 run 중에 수정하기 때문에 복사를 써야 합니다.
         route.run()
 
 

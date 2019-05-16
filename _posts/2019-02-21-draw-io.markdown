@@ -10,8 +10,6 @@ date:   2019-02-21 20:10:03 +0900
 * <a href="https://about.draw.io/" target="_blank">About 페이지</a>
 * <a href="https://www.draw.io/" target="_blank">직접 해보기</a>
 
-![image-center]({{ site.baseurl }}/assets/images/2019-02-21-diagram-01.jpg){: .align-center}
-
 ## draw.io
 한 눈에 봐도 예쁘고
 
