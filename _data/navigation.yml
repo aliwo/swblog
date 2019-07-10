@@ -1,5 +1,5 @@
 main:
-  - title: "파이썬의 정석"
+  - title: "초코PY"
     url: /series/principles_of_python/intro/
   - title: "About"
     url: /pages/about
@@ -11,19 +11,17 @@ pop:
     children:
       - title: "들어가며"
         url: /series/principles_of_python/intro/
-      - title: "파이썬 설치"
-        url: /series/principles_of_python/install_python/
-      - title: "개발환경 설치"
-        url: /series/principles_of_python/install_ide/
       - title: "첫 파이썬 프로그램"
         url: /series/principles_of_python/first_py/
       - title: "[Tmi]The Zen of Python"
         url: /series/principles_of_python/zen_of_python/
 
-  - title: 파이썬 코드 스타일
+  - title: 이곳은 초코PY 공장
     children:
       - title: "주석"
         url: /series/principles_of_python/comment/
+      - title: "간단한 계산하기"
+        url: /series/principles_of_python/choco_recipe/
       - title: "코드 블록"
         url: /series/principles_of_python/code_block/
       - title: "변수와 변수 할당"
