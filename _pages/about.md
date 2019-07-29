@@ -30,6 +30,21 @@ author_profile: true
 * (전) 주식회사 레터플라이 (Flask, Angular) 2017-08 ~ 2018-05 개발자 재직!
 * (현) 사다리쿡 2018 ~ 
 
+## 프로젝트
+레터플라이: <a href="https://www.letterfly.co.kr/main" target="_blank"> https://www.letterfly.co.kr/main </a>
+* 같은 배송지에 다수의 상품을 묶어 보내는 묶음 배송 기능
+* 편지 & 선물 & 포토카드 에 부착되는 리뷰 리스트
+* 셀레니움 주문 테스트
+* 파라미터 하나 변경으로 운영, QA, 로컬 db 커넥션을 입맛대로 가져올 수 있는 데코레이터
+* 3000줄 극악 코드 -> 2000줄 리펙토링 ^^
+
+
+사다리쿡: (앱스토어에 사다리쿡 검색)
+* 브론즈부터 마스터 등급까지 회원 권환을 분리하는 사다리쿡 Tier 제도 구축
+* FCM PUSH 리펙토링
+* 관리자 페이지에서 볼 수 있는 월별 & 일별 거래량 그래프
+* 관리자 페이지의 각 기능에 권한을 부여함으로 구현된 중간 관리자 기능.
+
 
 ## 언어 & 프레임 워크
 * Flask, Django, Mysql, PHP, Arduino, Android, Angular, Vue, Jquery, Node.js 경험 有
