@@ -30,10 +30,12 @@ pop:
   - title: 본격적인 초코 만들기
     children:
       - title: "스크립트와 입출력"
-        url: /series/principles_of_python/if/
-      - title: "조건문 if"
-        url: /series/principles_of_python/if/
-      - title: "반복"
+        url: /series/principles_of_python/script
+      - title: "변수 할당 연습(미완성)"
+        url: /series/principles_of_python/realistic_ingredients_consumption
+      - title: "if (미완성)"
+        url: /series/principles_of_python/
+      - title: "반복 (반복)"
         url: /series/principles_of_python/loop/
 
   - title: 자료형
@@ -119,7 +121,7 @@ pop:
 
   - title: 예외처리
     children:
-      - title: "해보고 제외하고 아니면 마지막으로"
+      - title: "try except else finally"
         url: /docs/posts/
       - title: "공개예정"
         url: /docs/pages/
@@ -146,11 +148,3 @@ pop:
       - title: "async await"
         url: /series/principles_of_python/async_await/
 
-  - title: 부록
-    children:
-      - title: "보시기에 심히 좋았더라"
-        url: /docs/stylesheets/
-      - title: "초콜릿 공장 만들기"
-        url: /docs/javascript/
-      - title: "datetime 모듈, aware 와 naive"
-        url: /docs/javascript/
