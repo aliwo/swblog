@@ -30,9 +30,11 @@ pop:
   - title: 본격적인 초코 만들기
     children:
       - title: "스크립트와 입출력"
-        url: /series/principles_of_python/script
-      - title: "변수 할당 연습(미완성)"
-        url: /series/principles_of_python/realistic_ingredients_consumption
+        url: /series/principles_of_python/script/
+      - title: "함수" # 반 쯤 완성
+        url: /series/principles_of_python/realistic_ingredients_consumption/
+      - title: "스코프"
+        url: /series/principles_of_python/scope/
       - title: "if (미완성)"
         url: /series/principles_of_python/
       - title: "반복 (반복)"
