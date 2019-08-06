@@ -10,6 +10,17 @@ date:   2019-08-04 20:21:03 +0900
 초콜릿을 만들 때 재료가 조금씩 빠져나가는 편이
 좀 더 진짜 공장 다울 것 같지 않을까?
 
+## factory.py
+이번 챕터를 시작하기 전 factory.py 의 모양은 다음과 같다.
+
+{% highlight python %}
+# 이곳은 초코 공장입니다.
+
+choco = 60 + sugar + 100
+milk_choco = 60 + sugar + 200
+dark_choco = 90 + sugar + 100
+{% endhighlight %}
+
 
 ## 총 재료 양 선언하기.
 `factory.py` 를 열어서 다음과 같이 작성하자.

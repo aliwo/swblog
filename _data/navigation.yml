@@ -31,7 +31,7 @@ pop:
     children:
       - title: "스크립트와 입출력"
         url: /series/principles_of_python/script/
-      - title: "함수" # 반 쯤 완성
+      - title: "함수"
         url: /series/principles_of_python/realistic_ingredients_consumption/
       - title: "스코프"
         url: /series/principles_of_python/scope/
