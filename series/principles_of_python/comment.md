@@ -8,7 +8,7 @@ date:   2019-07-10 10:21:03 +0900
 Python 프로그래밍을 배워보려고 한다. 
 그래서 본 강의의 이름도 초코PY 라고 지었다.
 
-![image-center]({{ site.baseurl }}/assets/images/2019-07-10-choco-fac.jpg){: .align-center}
+![image-center]({{ site.baseurl }}/assets/images/2019-08-06-choco-factory.jpg){: .align-center}
 
 우리가 만들 초코공장에서는 매일 다음과 같은 일들이 일어난다.
 

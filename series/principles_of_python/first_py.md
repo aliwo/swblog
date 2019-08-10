@@ -80,6 +80,7 @@ for i in range(4):
 winsound.Beep(369, 600) # F#
 
 # PYTHON GANGNAM STYLE!
+# 아름다워~ 사랑스러워~ 그래바로 너
 {% endhighlight %}
 
 이런 것도 파이썬으로 할 수 있다.

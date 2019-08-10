@@ -35,15 +35,19 @@ pop:
         url: /series/principles_of_python/realistic_ingredients_consumption/
       - title: "스코프"
         url: /series/principles_of_python/scope/
+      - title: "스코프를 사용하는 이유"
+        url: /series/principles_of_python/why_scope/
+      - title: "다시 함수"
+        url: /series/principles_of_python/
       - title: "if (미완성)"
         url: /series/principles_of_python/
       - title: "반복 (반복)"
         url: /series/principles_of_python/loop/
 
-#  - title: 자료형
-#    children:
-#      - title: "객체"
-#        url: /series/principles_of_python/object/
+  - title: 원료 공급하기
+    children:
+      - title: "객체(미공개)"
+        url: /series/principles_of_python/
 #      - title: "None"
 #        url: /series/principles_of_python/none/
 #      - title: "리스트"
@@ -57,8 +61,8 @@ pop:
 #      - title: "[Advanced]리스트 컴프리헨션"
 #        url: /series/principles_of_python/list_comprehension/
 #
-#  - title: 함수
-#    children:
+  - title: 초코 매장
+    children:
 #      - title: "함수"
 #        url: /series/principles_of_python/func/
 #      - title: "변수의 스코프"
