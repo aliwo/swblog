@@ -13,8 +13,6 @@ pop:
         url: /series/principles_of_python/intro/
       - title: "첫 파이썬 프로그램"
         url: /series/principles_of_python/first_py/
-      - title: "[Tmi]The Zen of Python"
-        url: /series/principles_of_python/zen_of_python/
 
   - title: 이곳은 초코PY 공장
     children:

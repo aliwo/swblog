@@ -36,6 +36,8 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 ```
 
+파이썬의 철학을 나타내는 20계명이다.
+
 갑작스러운 영어에 현기증이 난다는 독자들을 위해 한글 문서도 준비했다.<a target="_blank" 
 href="https://bitbucket.org/sk8erchoi/peps-korean/src/767c779c164856af198a9d08d906a55b24652728/pep-0020.txt?at=default&fileviewer=file-view-default">
 링크
@@ -62,7 +64,9 @@ pythonic 한 방식이 가장 옳은 방식이라는 억지를 부리려는 것�
 그러면 이제 파이썬 공부를 시작해 보자. 다음 장으로 넘어가길 바란다.
  
 <h2>20번째 계명</h2>
-참고로 <a href="https://stackoverflow.com/questions/4504487/the-zen-of-python-distils-the-guiding-principles-for-python-into-20-aphorisms-bu">
+20계명이라고 했는데, 잘 세어보면 19문장 밖에 없다.
+
+<a href="https://stackoverflow.com/questions/4504487/the-zen-of-python-distils-the-guiding-principles-for-python-into-20-aphorisms-bu">
 20번째 계명
 </a> 은 여러분들이 만들어서 스스로의 마음에 하나씩 간직하고 있길 바란다. 어쩌면 파이썬을 배우는 도중에
  여러분들 만의'20번째' 계명이 만들어질지도 모르겠다.
