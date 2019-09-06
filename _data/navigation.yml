@@ -36,16 +36,16 @@ pop:
       - title: "스코프를 사용하는 이유"
         url: /series/principles_of_python/why_scope/
       - title: "다시 함수"
-        url: /series/principles_of_python/
-      - title: "if (미완성)"
-        url: /series/principles_of_python/
+        url: /series/principles_of_python/re_func/
+      - title: "if"
+        url: /series/principles_of_python/if/
       - title: "반복 (반복)"
         url: /series/principles_of_python/loop/
 
-  - title: 원료 공급하기
+  - title: 초코 공장
     children:
-      - title: "객체(미공개)"
-        url: /series/principles_of_python/
+      - title: "객체와 초코공장"
+        url: /series/principles_of_python/choco_factory/
 #      - title: "None"
 #        url: /series/principles_of_python/none/
 #      - title: "리스트"
