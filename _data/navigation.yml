@@ -39,13 +39,15 @@ pop:
         url: /series/principles_of_python/re_func/
       - title: "if"
         url: /series/principles_of_python/if/
-      - title: "반복 (반복)"
-        url: /series/principles_of_python/loop/
 
-  - title: 초코 공장
+  - title: 초코
     children:
-      - title: "객체와 초코공장"
-        url: /series/principles_of_python/choco_factory/
+      - title: "객체와 클래스"
+        url: /series/principles_of_python/choco/
+      - title: "객체와 클래스 (구)"
+        url: /series/principles_of_python/class_and_object/
+      - title: "DateTime"
+        url: /series/principles_of_python/datetime/
 #      - title: "None"
 #        url: /series/principles_of_python/none/
 #      - title: "리스트"
@@ -59,7 +61,7 @@ pop:
 #      - title: "[Advanced]리스트 컴프리헨션"
 #        url: /series/principles_of_python/list_comprehension/
 #
-  - title: 초코 매장
+  - title: 초코 공장
     children:
 #      - title: "함수"
 #        url: /series/principles_of_python/func/
