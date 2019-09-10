@@ -114,10 +114,30 @@ print(choco3.sweetness)
 {% endhighlight %}
 
 
+## 정리하기
 
+우리는 다음과 같이 초코 클래스를 만들어 보았다.
 
+{% highlight python %}
 
+class Choco:
 
+    def __init__(self, sweetness):
+        self.sweetness = sweetness
+
+{% endhighlight %}
+
+그리고 다음의 사실을 배웠다.
+
+* 새로운 자료형은 `class` 키워드를 사용해서 만든다.
+* 메소드의 첫번째 인자는 항상 self 이며, 자동으로 할당되기 때문에 밖에서 전달해줄 필요가 없다.
+* \_\_init\_\_ 은 클래스로부터 객체가 만들어질 때 호출되며, '생성자' 라고 부른다.
+
+## 참고하기
+\_\_init\_\_ 처럼
+이름 양쪽에 \_\_ 가 달려있는 메소드들을 `Magic Method` 라고 한다.
+이는 파이썬에서 특별한 목적을 갖고 사용하는 메소드 들로,
+여러분들이 이름을 지을 때에는 이를 따라해서는 안 된다.
 
 
 
