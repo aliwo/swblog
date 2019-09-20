@@ -1,6 +1,6 @@
 
 done = [True, False, False, False]
-done2 = [True, False, True, True, True, False, False]
+done2 = [True, False, True, True, True, False, False] # ABAAABB 의 최적해는 7(이동 4)
 
 # def turn_left(done, i):
 #     left = i

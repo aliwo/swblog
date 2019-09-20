@@ -76,7 +76,9 @@ assert solution('RNRHPGTWSPVEN') == 119
 assert solution('EEFCBLTGKZFLV') == 84
 assert solution('CZDGCCUYPJATF') == 68
 assert solution('AAABAAAB') == 7
-
+assert solution('AABAAAAAAAAAABAA') == 9
+assert solution('ABABAAAAAAABA') == 10
+assert solution('AABAAAAAAAAAAB') == 6
 
 
 

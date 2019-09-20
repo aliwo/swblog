@@ -46,6 +46,8 @@ pop:
         url: /series/principles_of_python/choco/
       - title: "객체와 클래스 (구)"
         url: /series/principles_of_python/class_and_object/
+      - title: "객체지향"
+        url: /series/principles_of_python/oop/
       - title: "DateTime"
         url: /series/principles_of_python/datetime/
 #      - title: "None"
