@@ -25,6 +25,10 @@ def add_node(node):
 
 
 def find_all_paths(start, end, path=[]):
+    '''
+    start 로 부터 시작해서 end 에 도달하는
+    모든 경로를 리턴합니다.
+    '''
     path = path + [start]
     if start == end:
         return [path]
@@ -51,5 +55,46 @@ def solution(begin, target, words):
 
     return len(reduce(lambda x, y: x if len(x) < len(y) else y, find_all_paths(begin, target))) - 1 # 시작지점은 안 센다.
 
+'''
+테스트 1 〉	통과 (0.05ms, 10.8MB)
+테스트 2 〉	통과 (0.33ms, 10.7MB)
+테스트 3 〉	통과 (1.02ms, 10.8MB)
+테스트 4 〉	통과 (0.06ms, 10.7MB)
+테스트 5 〉	통과 (0.04ms, 10.8MB)
+'''
 
-assert solution('hit', 'cog', ["hot", "dot", "dog", "lot", "log", "cog"]) == 4
+# assert solution('hit', 'cog', ["hot", "dot", "dog", "lot", "log", "cog"]) == 4
+
+
+def solution(begin, target, words):
+    answer = 0
+    Q = [begin] # queue 처럼 쓰겠다는 건가>
+
+    while True:
+        temp_Q = []
+        for word_1 in Q:
+            if word_1 == target: # 기저 사례: 시작단어 == 끝단어 일때
+                return answer
+            for i in range(len(words) - 1, -1, -1): # words 를 역순회전 합니다.
+                word_2 = words[i]
+                if sum([x != y for x, y in zip(word_1, word_2)]) == 1:
+                    temp_Q.append(words.pop(i))
+
+        if not temp_Q:
+            return 0
+        Q = temp_Q
+        answer += 1
+
+assert solution("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"]) == 4
+# assert solution("hit", "cog", ["hot", "dot", "dog", "lot", "log"]) == 0
+'''
+테스트 1 〉	통과 (0.06ms, 10.8MB)
+테스트 2 〉	통과 (0.11ms, 10.6MB)
+테스트 3 〉	통과 (0.46ms, 10.7MB)
+테스트 4 〉	통과 (0.04ms, 10.8MB)
+테스트 5 〉	통과 (0.04ms, 10.7MB)
+'''
+
+
+# 테스트 3에서 그래프는 1.02ms, 리스트는 0.46ms
+

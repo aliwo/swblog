@@ -50,6 +50,8 @@ pop:
         url: /series/principles_of_python/oop/
       - title: "DateTime"
         url: /series/principles_of_python/datetime/
+      - title: "부록(dict)"
+        url: /series/principles_of_python/dict/
 #      - title: "None"
 #        url: /series/principles_of_python/none/
 #      - title: "리스트"
