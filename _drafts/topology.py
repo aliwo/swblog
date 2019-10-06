@@ -3,7 +3,7 @@
 # 응 종만이가 맞아~
 seen = []
 order = []
-adj = [[1], [2], [], [2]]
+adj = [[1], [4], [1], [1, 2], []]
 
 
 def dfs(here):
@@ -14,10 +14,11 @@ def dfs(here):
     for i in range(len(adj)):
         if i in adj[here] and i not in seen:
             dfs(i)
-    order.append(here)
+    order.append(here+1)
 
 
 def topologicalSort():
+    dfs(4)
     for i in range(len(adj)):
         if i not in seen:
             dfs(i)
