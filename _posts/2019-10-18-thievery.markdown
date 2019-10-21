@@ -1,0 +1,128 @@
+---
+layout: single
+title:  "(파이썬으로 풀기)프로그래머스: 도둑질"
+date:   2019-10-18 11:10:03 +0900
+categories: [python3, algorithm]
+--- 
+
+## 문제
+<a href="https://programmers.co.kr/learn/courses/30/lessons/42897" target="_blank">링크</a>
+
+## 답안
+
+{% highlight python %}
+def solution(money):
+    cache = [money[0], money[0]] # 0번째 요소를 고르고 시작한 경우
+    cache2 = [0, money[1]] # 0번째 요소를 고르지 않고 시작한 경우
+
+    for i in range(2, len(money)-1):
+        cache.append(max(cache[i-2] + money[i], cache[i-1]))
+
+    for i in range(2, len(money)):
+        cache2.append(max(cache2[i-2] + money[i], cache2[i-1]))
+
+    return max(cache[-1], cache2[-1])
+{% endhighlight %}
+
+## 풀이
+이 문제에 접근하기 위한 핵심 포인트는 다음 2가지 입니다.
+
+* 상향식 (반복) 동적 계획법을 사용합시다.
+* 0번째 집을 터느냐 털지 않느냐를 꼭 구분해야 합니다.
+
+문제를 처음 보면 어떻게 풀어야 할지 감이 안오니 일단 리스트 money 의 길이를
+1 부터 늘려가는 방식으로 접근해 보겠습니다. (문제에서 money 가 최소 3 이상이라고 되어있긴 하지만)
+또한 일단은 문제를 단순화 하기 위해 리스트가 원형이 아니라고 생각해 봅니다. 집들이 직선으로 늘어서
+있는 것입니다.
+
+각 상황에서 얻을 수 있는 돈의 최대값은 다음과 같습니다.
+
+* 집이 하나 있을 때: 그 집을 털면 됩니다.
+* 집이 둘 있을 때: 0번째 집과 1번째 집을 비교하여 돈이 더 많은 집을 텁니다.
+
+cache[0] = 집이 하나 있을 때의 최대값. <br>
+cache[1] = 집이 둘 있을 때의 최대값. <br>
+이렇게 최대값을 변수 cache에 저장해 나간다고 합시다.
+
+집이 셋 있을 때 (money는 [1, 2, 3] 이라고 합시다.): 여기서부터 어려워집니다.
+바로 직전에 0번째 집을 털었느냐, 1번째 집을 털었느냐에 따라 3을 선택할 수 있는지
+여부가 바뀌게 됩니다. (리스트가 원형이 아님!) 
+
+* 만약 cache[0] 을 선택했다면, 3을 털 수 있으므로 최대값은 cache[0] + 3 이 됩니다.
+* 만약 cache[1] 을 선택했다면, 3을 털 수 없으므로 최대값은 cache[1] 이 됩니다.
+
+위 두가지 경우의 수를 비교해서 더 큰 수가 cache[2] 가 됩니다. 위 사실을 바탕으로 
+다음의 점화식을 세울 수 있습니다.
+
+**(i 가 2 이상일 때) cache[i] = max(cache[i-2] + money[i], cache[i-1])** {.text-center}
+
+이제 점화식은 만들었는데, 한가지 걸림돌이 남았습니다. **집이 원형으로 배치되었다.** 라는 것이죠.
+따라서 0 번째 집을 택한다면 마지막 집은 털 수 없습니다.
+
+마지막 집을 선택할 수 있느냐 없느냐를 모든 경우의 수마다 저장하는 방법도 있곘지만,
+간단한 방법은 "0번 집을 선택한 경우" A 와 "1번 집을 선택한 경우" B 2가지로 나누는 겁니다.
+
+* A 는 0번 집을 털었기 때문에 1번 집을 털 수 없습니다. 따라서 `cache = [money[0], money[0]]` 배열로
+ 회전을 시작하며, 마지막 집도 털 수 없으므로 마지막 집은 계산에 넣지 않습니다. 
+ `for i in range(2, len(money)-1)`
+ 
+* B 는 1번 집을 털었기 때문에 `cache2 = [0, money[1]]` 이며, 정상적으로 집들을 순회하면 됩니다.
+ `for i in range(2, len(money))`
+
+
+## 효율성 테스트를 통과하지 못하는 동적 계획법 풀이
+
+하향식으로 효율성 테스트 까지 통과하는 분이 있을지도 모르겠습니다만
+저는 다음과 같이 해 보았습니다.
+
+{% highlight python %}
+import sys
+sys.setrecursionlimit(99999999)
+
+
+class G:
+    money = []
+
+cache = {}
+
+
+def traverse(start, end):
+    '''
+    항상 오른쪽 (시계 방향)으로만 이동한다고 하자.
+    '''
+    if start >= end:
+        return 0
+
+    key = f'{start} {end}'
+
+    if key in cache:
+        return cache[key]
+
+    if start + 2 >= end:
+        cache[key] = max(G.money[start:end])
+        return cache[key]
+
+    cache[key] = max(G.money[start] + traverse(start + 2, end),
+                  G.money[start + 1] + traverse(start + 3, end))
+
+    return cache[key]
+
+
+def solution(money):
+    G.money = money
+    return max(traverse(1, len(money)), money[0] + traverse(2, len(money)-1))
+
+{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
