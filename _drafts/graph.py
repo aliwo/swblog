@@ -17,20 +17,18 @@ topology = []
 anchor = 0
 
 def dfs(here):
-    print(f'{here} 방문')
     visited.append(here)
     for i in kimchi_soup[here]:
         if i not in visited:
             dfs(i)
-            
 
 def dfs_all():
     global anchor
     for key, value in kimchi_soup.items():
         if key not in visited:
             dfs(key)
-            topology.append(visited[anchor:])
-            anchor = len(visited) # anchor 의 존재로 인해 위상정렬 때 중복을 피한다.
+            # topology.append(visited[anchor:])
+            # anchor = len(visited) # anchor 의 존재로 인해 위상정렬 때 중복을 피한다.
 
 dfs_all()
 
