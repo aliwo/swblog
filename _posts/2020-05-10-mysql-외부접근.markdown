@@ -1,0 +1,26 @@
+---
+layout: single
+title:  "mysql 외부에서 접근하기"
+date:   2020-04-20 11:10:03 +0900
+categories: [linux]
+---
+
+
+## 외부에서 접근할 수 있는 계정 생성
+원래 디폴트 mysql root 계정은 localhost 의 접근만 허용한다.
+나는 로컬 vm 에서 mysql 을 돌리고 (도커를 깔기 위해 hyper-v를 설정하면 virtual box 가 해괴한 버그를 일으키는 문제가 있어서
+도커 대신 virtualbox 를 쓰고 있다. 눈물.) 있기 때문에 외부 접근을 허용할 필요가 있다.
+어짜피 로컬에서 테스트 용도로만 쓰고 있고 (프로덕션 mysql 인데 외부 접근을 허용하는 사람은 없기를 바란다. ^^)
+공유기 뒤에 있기 때문에, 편의를 위해 외부 접근을 허용하도록 하겠다.
+
+## TL, DR;
+```mysql
+use mysql;
+select user, host from user; -- 현재 유저 조회 --
+
+CREATE USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'password'; -- 패스워드는 알아서 바꾸기! --
+GRANT ALL ON local.* TO 'root'@'%';
+```
+참고로 mysql_native_password 대신에 sha2 패스워드를 쓸 수 있는데... 
+sha2 패스워드를 쓸 경우 그냥 pymysql 에서는 접근이 안된다. cryptography 라는걸 깔아야 되는데
+cryptography 의 종속성중 하나가 윈도우에서 Visual C++ 14 를 요구한다. ^^

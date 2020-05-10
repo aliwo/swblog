@@ -69,3 +69,10 @@ normal 모드에서
 ```
 끝의 g 는 greedy 를 의미하는 듯 (모든 occurrence 를 찾는다.)
 gc 를 입력하면 파일 안의 모든 검색어를 일일이 순회하면서 바꿀지 말지를 물어본다.
+
+
+## autoindent
+:set autoindent
+:set expandtab 
+
+expandtab 은 tab 을 space 로 바꿔준다.
