@@ -10,7 +10,7 @@ categories: [kubernetes, mysql, cronjob]
 * GKE
 * Mysql (StatefulSet 으로 배포)
 
-## 준비
+## 할 일
 1. dump 파일을 저장할 bucket 생성 (설명 생략)
 2. 서비스 어카운트와 key 가져오기
 3. gsutil과 mysqldump가 설치된 docker image 준비하기
@@ -57,7 +57,6 @@ ENTRYPOINT ["/root/backup.sh"]
 alpine 리눅스 기반이기 때문에 패키지 매니저로 apk 를 사용합니다. timezone 을 세팅해요.(생략 가능)
 
 ```shell script
-#!/bin/bash
 # backup.sh
 # 오늘-날짜.sql 파일을 mysqldump을 사용해서 만듭니다. 이후 gsutil을 사용해서 bucket에 복사! 
 echo "dumping ... $DB_HOST, $DB_USER, $DB_PASS, $DB_NAME to $GS_BUCKET 디버깅용"
@@ -160,6 +159,15 @@ spec:
                 - name: GS_BUCKET
                   value: gs://<백업을 저장할 버킷 이름>
 ```
+
+## 한계
+cronjob 은 kube-controller-manager 의 시간대에 의존합니다.
+그런데 gke 의 kube-controller-manager 는 가려져 있기 때문에 (control plane 전체가 GCP에 의해 가려짐.)
+시간대를 한국 시간대로 바꿀 수가 없어요! ㅠㅠ
+
+특정 주기에 의해 돌아가는 cron 을 만들거나
+외국 시간대에 맞추는 것 밖에 할 수 없습니다.
+단! 위처럼 이미지 내부의 시간대는 조절할 수 있습니다. (cron 이 실행되는 시간대는 조절할 수 없지만)
 
 
 ## 끝!
