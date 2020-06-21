@@ -56,7 +56,7 @@ ENTRYPOINT ["/root/backup.sh"]
 베이스 이미지는 cloud-sdk:alpine 을 사용합니다. gcloud 와 gsutil이 자동으로 깔려 있어요!
 alpine 리눅스 기반이기 때문에 패키지 매니저로 apk 를 사용합니다. timezone 을 세팅해요.(생략 가능)
 
-```shell script
+```
 # backup.sh
 # 오늘-날짜.sql 파일을 mysqldump을 사용해서 만듭니다. 이후 gsutil을 사용해서 bucket에 복사! 
 echo "dumping ... $DB_HOST, $DB_USER, $DB_PASS, $DB_NAME to $GS_BUCKET 디버깅용"
