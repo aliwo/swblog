@@ -153,7 +153,7 @@ spec:
                   valueFrom:
                     secretKeyRef:
                       name: <secret 이름>
-                      key: <mysql 비밀번호>
+                      key: <mysql 비밀번호가 들어있는 key>
                 - name: DB_NAME
                   value: <백업할 mysql database>
                 - name: GS_BUCKET
