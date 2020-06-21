@@ -31,7 +31,7 @@ GCP 콘솔 > IAM 에서 (저는 Editor 권한을 갖고 있는 default 계정을
 ```dockerfile
 FROM google/cloud-sdk:alpine
 
-# mysql 설치
+# mysqldump 설치
 RUN apk --update add mysql-client
 
 # timezone 설정
