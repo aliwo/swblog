@@ -27,3 +27,4 @@ categories: [kubernetes, elasticsearch, kibana]
 ```
 docker run --restart unless-stopped --name elastic_forward -p 9200:9200 playground1 kubectl port-forward svc/quickstart-es-default --address 0.0.0.0 -n sy-elastic 9200:9200
 ```
+

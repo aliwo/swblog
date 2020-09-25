@@ -11,8 +11,6 @@ gallery = {
 
 def dfs(here, visited=[]):
     visited.append(here)
-    
-
 
 
 def solution():
