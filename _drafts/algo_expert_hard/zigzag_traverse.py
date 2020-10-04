@@ -5,6 +5,10 @@ def zigzagTraverse(array):
     2. 오른쪽으로 갔다가 좌하향 (만약 막다른 골목이면 아래로 내려갔다가 좌하향)
 
     막다른 골목이면 stuck == True
+
+    답지를 보고... 답지는 append() 를 while 안에서 한 번만 쓰니까
+    나 처럼 2번 result 의 길이를 체크할 필요도 없었고...
+    현재 goingDown 이냐 goingUp 이냐만 따진다.
     '''
 
     if not array:

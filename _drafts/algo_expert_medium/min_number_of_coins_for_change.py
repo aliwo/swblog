@@ -1,19 +1,13 @@
 
 strategy = '''
-항상 가장 큰 수를 취할 수 있는 건 아니다.
-n = 5 이고
-denoms = [2, 3, 4]
-일때, 4를 쓸 수는 없다. 2랑 3을 써야 답에 다다른다. 그래서 dp를 써야 하는 것 
+답지의 접근 방식:
+배열 result[0] 에 주어진 denomination 으로 0원을 만들때의 minimum number of coins 를 저장한다.
+result[1] 은 1원을 만들 때 의 minimum number of coins ...
 
-n 이 0일 떄 1가지 방법 (안 내는 것)
-n 이 1일 때 1가지 방법 (1을 내는 것) 호은  -1
-n 이 2일 때 
-
-가장 큰 수를 넣고, 뻗어 나가다가 전부 실패하면
-그 다음 수를 넣고 뻗어 나가는 것.
-
-제일 큰 수를 쓴다고 제일 적은 횟수를 쓰는게 아니다.
-n: 135, denoms: [130, 4, 1, 60, 75]
+자 이제 denoms 를 회전하면서
+i 보다 denom 이 작을 때 (즉, i원을 만드는 데에 denom 을 사용할 수 있을 때)
+result[i] = min(result[i], result[i - denom] + 1) # 현재 result[i] 값 혹은, denom 동전 하나를 써서 만들 수 있는 값 중 min 을 취한다.
+모든 denoms 에 대해 위 과정을 반복한다.
 '''
 
 def minNumberOfCoinsForChange(n, denoms):
