@@ -29,7 +29,7 @@ Computer Science 이외의 분야에서는 어떤지 모르겠지만, 학교에�
 
 ## 내가 지금 배우는 강의
 
-![image-center]({{ site.baseurl }}/assets/images/2020-10-12-for-loop.jpg){: .align-center}
+![image-center]({{ site.baseurl }}/assets/images/2020-10-12-for-loop.png){: .align-center}
 
 내가 지금 듣는 강의에서 for 문을 가르치는 방법.
 {: .text-center}
