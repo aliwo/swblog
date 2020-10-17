@@ -1,0 +1,34 @@
+---
+layout: single
+title:  "FTD"
+date:   2020-10-17 11:10:03 +0900
+categories: [algorithm]
+--- 
+
+## 스태틱 메소드
+오랜만에 자바를 다시 공부한다. static method 안에서 인스턴스 변수에 (static 이 아닌 변수에) 접근할 수
+없다는 것을 다시 배웠다... 즉, this 에 접근 할 수 없음.
+근데 클래스 자신은 가리킬 수 있음... 뭐여
+
+```java
+class Singleton {
+    private Singleton() {
+    }
+
+    class Foo extends Singleton {
+
+    }
+
+    public static Singleton getInstance() {
+        return new Singleton(); // 가능!
+        return new Foo(); // 불가능!
+        
+    }
+}
+```
+
+
+https://wikidocs.net/228
+
+
+
