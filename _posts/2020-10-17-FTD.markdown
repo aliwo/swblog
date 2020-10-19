@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "FTD"
+title:  "TIL"
 date:   2020-10-17 11:10:03 +0900
-categories: [algorithm]
+categories: [java]
 --- 
 
 ## 스태틱 메소드
@@ -27,8 +27,40 @@ class Singleton {
 }
 ```
 
-
 https://wikidocs.net/228
+
+
+## 자바의 상속
+- private 멤버는 상속되지 않는다.
+- final class 는 상속할 수 없다.
+- public 혹은 protected 생성자만 있다면 상속할 수 없다. (단! inner class 는 상속 가능.)
+
+
+## Junit 다루기
+- 모든 Junit 메소드는 void 여야 한다
+- 테스트 메소드는 딱 테스트만 하고... 공유되는 로직은 다른 메소드로 빼야 하나 보다.
+
+## 제네릭
+- type argument 는 primitive 타입일 수 없다... 
+- 컴파일러 구현상의 문제라고...
+- https://www.quora.com/Why-is-it-impossible-to-use-primitive-types-as-a-type-parameter-in-Java
+- 그래서 int 대신에 Integer 를 쓴댄다. 맙소사 ㅋㅋㅋㅋㅋ
+
+## 반복
+- java 의 전통적인 for 반복문에서 첨자 변수 (혹은 이터레이터) (i) 는 for 문이 종료됨과 함께 유효범위가 끝난다. (파이썬은 남아 있음.)
+```python
+for i in range(1, 4):
+    print(i) # 1, 2, 3 출력!
+print(i) # 3 출력!
+```
+java 는 for 문 종료와 함께 i가 증발한다.
+```java
+for (Iterator<Element> i = c.iterator(); i.hasNext();) {
+    Element e = i.next();
+}
+System.out.println(i); // 에러!
+```
+
 
 
 
