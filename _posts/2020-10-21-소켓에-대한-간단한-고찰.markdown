@@ -1,0 +1,64 @@
+---
+layout: single
+title:  "소켓에 대한 간단한 고찰"
+date:   2020-10-17 11:10:03 +0900
+categories: [socket]
+--- 
+
+## socket
+처음 개발할때 mysql socket, socket 통신 등등
+천지 사방에 socket 이라고 써져 있는데 이게 정확히 뭔질 몰라서 답답했었다.
+
+
+## socket 만들기
+Address Family 랑 type(socket type) 만 지정하면 socket을 만들 수 있다.
+- bind 시에 ip랑 port 를 할당한다. `0.0.0.0` 이면 모든 ip 주소. (any) 그게 아니면 컴퓨터의 현재 ip 주소로 들어온 패킷만 받아들임
+- `listen` : connection 을 받아들일 수 있는 상태가 된다. (TCP 만 connection 이 있으니까 tcp 만 listen 함)
+- `accept` : connection 을 수락한다. (이것 역시 TCP 만 함) 이때 새 socket 을 만들어서 리턴한다.
+- `shutdown` : tcp connection 을 닫는다.
+- TCP 서버에서의 소켓 함수 호출 순서: `socket() -> bind() -> listen() -> accept() -> read()/write() -> close()`
+
+listen 을 하고 있는 소켓은 절대로 송,수신에 사용되지 않으며, 새로운 소켓을 획득하기 위한 수단으로 사용된다고 한다. 
+(오... 왜 그렇게 만들었을까.)
+
+
+## socket type
+TCP == 스트림 소켓. 믿을 수 있는 양방향 통신
+UDP == 데이터그램 소켓, 단방향 통신. 가볍다.
+
+
+## Address Family
+  Name                   Purpose                 
+   AF_UNIX, AF_LOCAL      Local communication              
+   AF_INET                IPv4 Internet protocols        
+   AF_INET6               IPv6 Internet protocols
+   AF_IPX                 IPX - Novell protocols
+   AF_NETLINK             Kernel user interface device    
+   AF_X25                 ITU-T X.25 / ISO-8208 protocol 
+   AF_AX25                Amateur radio AX.25 protocol
+   AF_ATMPVC              Access to raw ATM PVCs
+   AF_APPLETALK           Appletalk                      
+   AF_PACKET              Low level packet interface                  
+   AF_UNIX, AF_LOCAL      Local communication              
+   AF_INET                IPv4 Internet protocols        
+   AF_INET6               IPv6 Internet protocols
+   AF_IPX                 IPX - Novell protocols
+   AF_NETLINK             Kernel user interface device    
+   AF_X25                 ITU-T X.25 / ISO-8208 protocol 
+   AF_AX25                Amateur radio AX.25 protocol
+   AF_ATMPVC              Access to raw ATM PVCs
+   AF_APPLETALK           Appletalk                      
+   AF_PACKET              Low level packet interface  
+
+
+
+## UDP 도 에러체크를 한다고 한다.
+단, udp 는 에러난 데이터에 대해 재전송 요청을 하지 않고 그냥 삭제해 버림.
+https://m.blog.naver.com/PostView.nhn?blogId=sol9501&logNo=70106345485&proxyReferer=https:%2F%2Fwww.google.com%2F
+
+
+## API 목록
+(아마도) 버클리에서 처음 만들때 부터 socket, bind, listen 등등을 설계했나보다.
+여기서 소켓은 "종단" 을 의미할 뿐, 엄밀한 기술적 정의가 있는 건 아니라고 한다. (클래스 명세 같은게 있는게 아닌 듯?)
+https://igotit.tistory.com/entry/BSD-Berkeley-Socket 
+ 

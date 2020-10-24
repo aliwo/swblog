@@ -18,7 +18,7 @@ author_profile: true
 
 지금 보고 계시는 jekyll 블로그 theme `minimal mistake` 커미터 입니다. (사소한 버그 픽스 ^^)
 
-요즘은 Keras 를 공부 하고 있습니다.
+요즘은 Spring 을 공부 하고 있습니다.
 
 <-- 깃허브 링크는 왼쪽 Side bar 에! 
 
@@ -28,7 +28,7 @@ author_profile: true
 * (전) SK 청년비상 2기 Movin'n Culture 개발자 (Arduino, Android, Flask)
 * 프로그래밍 동아리 YAPP 2016 ~ 현재
 * (전) 주식회사 레터플라이 (Flask, Angular) 2017-08 ~ 2018-05 개발자 재직!
-* (현) 사다리쿡 2018 ~ 
+
 
 ## 프로젝트
 레터플라이: <a href="https://www.letterfly.co.kr/main" target="_blank"> https://www.letterfly.co.kr/main </a>
@@ -39,15 +39,9 @@ author_profile: true
 * 3000줄 극악 코드 -> 2000줄 리펙토링 ^^
 
 
-사다리쿡: (앱스토어에 사다리쿡 검색)
-* 브론즈부터 마스터 등급까지 회원 권환을 분리하는 사다리쿡 Tier 제도 구축
-* FCM PUSH 리펙토링
-* 관리자 페이지에서 볼 수 있는 월별 & 일별 거래량 그래프
-* 관리자 페이지의 각 기능에 권한을 부여함으로 구현된 중간 관리자 기능.
-
 
 ## 언어 & 프레임 워크
-* Flask, Django, Mysql, PHP, Arduino, Android, Angular, Vue, Jquery, Node.js 경험 有
+* Flask, Mysql, Arduino, Angular, Vue 경험 有
 * 제일 자신 있는 건 Flask, Javascript 계열
 * 영어 (토익 960)
 * 일본어 (jlpt n3)
@@ -64,9 +58,10 @@ author_profile: true
 * 2017-08-21 주식회사 레터플라이 입사
 * 2018-04-19 AWS summit 참석
 * 2018-05 YAPP 홈페이지 유지보수 <a href="http://yapp.co.kr/" target="_blank">http://yapp.co.kr/</a>
-* 2018-06 브론즈부터 마스터 등급까지 회원 권환을 분리하는 사다리쿡 Tier 제도 구축
 * 2018-10-27 어린이 드론 수업
 * 2019-01 ~ 03 YAPP 파이썬 스터디
 * 2019-02-08 Minimal Mistake 오픈소스 Commit
 * 2019-02-14 AWS 인공지능/머신러닝 온라인 컨퍼런스 참여
 * 2019-04-18 AWS summit 참석
+* 2019-하반기 YAPP 파이썬 스터디 2기
+* 2020-08 청강대학교 시간강사
