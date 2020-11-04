@@ -6,7 +6,7 @@ categories: [regex]
 --- 
 
 ## Preface
-본 문서는 <a href="https://martinfowler.com/bliki/BlueGreenDeployment.html" target="_blank"> 
+<a href="https://martinfowler.com/bliki/BlueGreenDeployment.html" target="_blank"> 
 https://martinfowler.com/bliki/BlueGreenDeployment.html </a>
 을 번역해 보았습니다. 
 
