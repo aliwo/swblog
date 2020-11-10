@@ -1,0 +1,25 @@
+---
+layout: single
+title:  "TIL: JAVA"
+date:   2020-11-10 11:10:03 +0900
+categories: [TIL]
+--- 
+
+## 초기화 된 arrayList 생성
+파이썬, 자바스크립트에서 너무도 당연하게 `[1,2,3]` 을 쓰다가.
+자바 동네로 돌아와서 하나하나씩 검색하면서 쓰려니까 참 새롭다.
+
+값이 들어 있는 Integer ArrayList 를 사용하려면...
+```java
+ArrayList<Integer> list = new ArrayList<Integer>(Arrays.asList(1,2,3));
+```
+
+
+
+
+
+
+
+
+
+
