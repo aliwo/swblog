@@ -14,6 +14,155 @@ categories: [TIL]
 ArrayList<Integer> list = new ArrayList<Integer>(Arrays.asList(1,2,3));
 ```
 
+## Effective Java Item 10. equals()
+
+<a target="_blank" href="https://github.com/WegraLee/effective-java-3e-source-code">이펙티브 자바</a>
+
+### enum 의 equals() 는 override 할 수 없다.
+왜? final 로 선언 되어 있기 때문
+
+<a target="_blank" href="https://stackoverflow.com/questions/2964704">링크</a>
+
+```
+Anything but return this == other would be counter intuitive and violate 
+the principle of least astonishment. Two enum constants are expected to be equal 
+if and only if they are the same object and the ability to override this behavior 
+would be error prone.
+```
+
+### equals 를 override 하는 올바른 방법
+Effective Java 에서 옮겨 온 후 조금 더 쉬운 말로... 해석해 봤다.
+
+CaseInsensitive 한 String 을 만드려고 한다.
+```java
+public final class CaseInsensitiveString {
+    private final String s;
+
+    public CaseInsensitiveString(String s) {
+        this.s = Objects.requireNonNull(s);
+    }
+
+    // 대칭성 위배!
+    @Override public boolean equals(Object o) {
+        if (o instanceof CaseInsensitiveString)
+            return s.equalsIgnoreCase(
+                    ((CaseInsensitiveString) o).s);
+        if (o instanceof String)  // 한 방향으로만 작동한다!
+            return s.equalsIgnoreCase((String) o);
+        return false;
+    }
+    ...
+}
+```
+CaseInsensitive 의 객체에서 `equals()` 를 호출하면 예상한 대로 동작한다. 대소문자를 무시하고 비교를 하게 된다.
+그러나 반대로 String 의 객체에서 `equals()` 를 호출하면? String 의 `equals()` 는 override 하지 않았다! 대소문자를 
+무시할 수 가 없다!
+
+그래서 대칭성이 깨진다고 하는 것이다.
+
+해결 방법은? 아쉽게도 포기하는 것이란다. 그냥 CaseInsensitive 객체 끼리만 비교하는 것에서 만족한다.
+```java
+    @Override public boolean equals(Object o) {
+        return o instanceof CaseInsensitiveString && 
+            s.equalsIgnoreCase(((CaseInsensitiveString) o).s);
+    }
+```
+
+### 추이성
+`a == b`, `b == c` 이라고 하자. 이 때, `a == c` 가 성립하면 추이성을 만족한다. 만약 `a != c` 라면 추이성이 깨진 것.
+결론부터 말하자면 부모 클래스를 확장 한 뒤 필드를 하나 추가한 후, 이를 equals 에 반영하면 추이성이 깨지게 된다.
+
+class Point 가 x 좌표와 y 좌표를 가진다고 하자.
+```java
+public class Point {
+    private final int x;
+    private final int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    @Override public boolean equals(Object o) {
+        if (!(o instanceof Point))
+            return false;
+        Point p = (Point)o;
+        return p.x == x && p.y == y;
+    }
+}
+```
+
+이제 색깔을 가진 ColorPoint 클래스를 만들어 보자.
+```java
+public class ColorPoint extends Point {
+    private final Color color;
+
+    public ColorPoint(int x, int y, Color color) {
+        super(x, y);
+        this.color = color;
+    }
+
+    // 코드 10-3 잘못된 코드 - 추이성 위배! (57쪽)
+    @Override public boolean equals(Object o) {
+        if (!(o instanceof Point))
+            return false;
+
+        // o가 일반 Point면 색상을 무시하고 비교한다.
+        if (!(o instanceof ColorPoint))
+            return o.equals(this);
+
+        // o가 ColorPoint면 색상까지 비교한다.
+        return super.equals(o) && ((ColorPoint) o).color == color;
+    }
+}
+```
+
+이제 좌표가 모두 같은 1.빨강 ColorPoint 2.그냥 Point 3.파랑 ColorPoint 를 비교한다고 하자.
+1 이랑 2가 같고, 2랑 3이 같은데, 1과 3은 같지 않다! 추이성이 깨졌다.
+
+
+### 상속보단 구성
+이 상황에서 추이성을 지키려면? 상속말고 구성을 써야 한다.
+```java
+public class ColorPoint {
+    private final Point point;
+    private final Color color;
+
+    public ColorPoint(int x, int y, Color color) {
+        point = new Point(x, y);
+        this.color = Objects.requireNonNull(color);
+    }
+
+    /**
+     * 이 ColorPoint의 Point 뷰를 반환한다.
+     */
+    public Point asPoint() {
+        return point;
+    }
+
+    @Override public boolean equals(Object o) {
+        if (!(o instanceof ColorPoint))
+            return false;
+        ColorPoint cp = (ColorPoint) o;
+        return cp.point.equals(point) && cp.color.equals(color);
+    }
+
+    @Override public int hashCode() {
+        return 31 * point.hashCode() + color.hashCode();
+    }
+}
+```
+
+
+## Java.sql.Timestamp 의 결함
+
+`Java.sql.Timestamp` 는 대칭성을 위반한다.
+`java.sql.Timestamp` 는 `java.util.Date` 를 확장한 후 `nanoseconds` 필드를 추가했다. 따라서 대칭성을 위배한다.
+Timestamp 를 이렇게 설계한 것은 실수니 절대 따라 해서는 안 된다.
+(세상에 맙소사...)
+
+
+
 
 
 
