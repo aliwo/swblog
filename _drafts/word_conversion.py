@@ -78,7 +78,7 @@ def solution(begin, target, words):
             for i in range(len(words) - 1, -1, -1): # words 를 역순회전 합니다.
                 word_2 = words[i]
                 if sum([x != y for x, y in zip(word_1, word_2)]) == 1:
-                    temp_Q.append(words.pop(i))
+                    temp_Q.append(words._pop(i))
 
         if not temp_Q:
             return 0

@@ -21,7 +21,6 @@ def calc_node(from_node, to_node, n):
     '''
     if from_node.x == 0 and from_node.y == 4:
         print('?')
-    print(f'{from_node.x} {from_node.y}  에서 {to_node.x} {to_node.y} 으로 이동 { calc(from_node.x, to_node.x, n) + calc(from_node.y, to_node.y, n)}!')
     return calc(from_node.x, to_node.x, n) + calc(from_node.y, to_node.y, n) + 1
 
 

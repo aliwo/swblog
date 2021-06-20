@@ -1,68 +1,35 @@
 
-# 그냥 정렬을 쓰면 이렇게 쉽게 풀린다.
-# def threeNumberSort(array, order):
-#     table = {elem: i for i, elem in enumerate(order)}
-#     return sorted(array, key=lambda x: table.get(x))
-
-
-def find_first(array, start_index, number):
-    for i in range(start_index, len(array)):
-        if array[i] == number:
-            return i
-    return -1
-
-
-def find_last(array, end_index, number):
-    for i in reversed(range(0, end_index)):
-        if array[i] == number:
-            return i
-    return -1
-
-
-# assert find_first([1,1,1], 0, 1) == 0
-# assert find_first([1,0,1], 0, 1) == 0
-# assert find_first([1,0,1], 1, 1) == 2
-# assert find_first([0,1,-1], 0, 1) == 1
-# assert find_first([-1,-1,1], 0, 1) == 2
-#
-# assert find_last([1,1,0], 2, 1) == 1
-# assert find_last([1,1,1], 2, 1) == 2
-# assert find_last([1,1,1], 1, 1) == 1
 
 def threeNumberSort(array, order):
-    last_zero = find_last(array, len(array), order[0])
+    '''
+    0 과 0 을 swap 하는 경우가 발생한다. (first value 랑 fist value 를 swap 함)
+    이걸 막자니 쓸 데 없이 if 가 늘어나고... 이게 최선이란 말인가?
+    '''
+    first_idx = 0
+    second_idx = 0
+    third_idx = len(array) - 1
 
-    first_one = find_first(array, 0, order[1])
-    last_one = find_last(array, len(array), order[1])
-
-    first_two = find_first(array, 0, order[2])
-
-    if last_zero != -1:
-        if first_one != -1:
-            while last_zero > first_one:
-                array[last_zero], array[first_one] = array[first_one], array[last_zero]
-                if last_zero > last_one:
-                    last_one = last_zero
-                last_zero = find_last(array, last_zero, order[0])
-                first_one = find_first(array, first_one, order[1])
-        elif first_two != -1:
-            while last_zero > first_two:
-                array[last_zero], array[first_two] = array[first_two], array[last_zero]
-                last_zero = find_last(array, last_zero, order[0])
-                first_two = find_first(array, first_two, order[2])
-
-    if first_two != -1:
-        if last_one != -1:
-            while first_two < last_one:
-                array[last_one], array[first_two] = array[first_two], array[last_one]
-                last_one = find_last(array, last_one, order[1])
-                first_two = find_first(array, first_two, order[2])
-        elif last_zero != -1:
-            while first_two < last_zero:
-                array[last_zero], array[first_two] = array[first_two], array[last_zero]
-                last_zero = find_last(array, last_zero, order[1])
-                first_two = find_first(array, first_two, order[2])
+    while second_idx <= third_idx:
+        if array[second_idx] == order[1]:
+            second_idx += 1
+        elif array[second_idx] == order[0]:
+            array[first_idx], array[second_idx] = array[second_idx], array[first_idx]
+            first_idx += 1
+            second_idx += 1
+        elif array[second_idx] == order[2]:
+            array[third_idx], array[second_idx] = array[second_idx], array[third_idx]
+            third_idx -= 1
 
     return array
 
-print(threeNumberSort([7, 8, 9, 7, 8, 9, 9, 9, 9, 9, 9, 9], [8,7,9]))
+print(threeNumberSort([0,0,0,-1,-1,0,1,1], [0, 1, -1]))
+print(threeNumberSort([], [0, 1, -1]))
+# print(threeNumberSort([-2, -3, -3, -3, -3, -3, -2, -2, -3], [-2, -3, 0]))
+
+
+
+
+
+
+
+# print(threeNumberSort([1, 0, 0, -1, -1, 0, 1, 1], [0, 1, -1]))

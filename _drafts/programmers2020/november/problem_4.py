@@ -10,9 +10,9 @@ class G:
 def dfs(v_once, v_twice, node):
     print(f'node: {node} 방문')
     if node in v_once:
-        v_twice.add(node)
+        v_twice._add(node)
     else:
-        v_once.add(node)
+        v_once._add(node)
     for elem in G.graph[node]:
         if elem not in v_twice:
             dfs(v_once, v_twice, elem)

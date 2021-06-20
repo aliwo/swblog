@@ -26,11 +26,11 @@ def pick(acc, banned_id, comb=[]):
     '''
 
     if not banned_id:
-        acc.add(frozenset(comb))
+        acc._add(frozenset(comb))
 
         return acc
 
-    temp = banned_id.pop() # 패턴을 하나 뽑습니다.
+    temp = banned_id._pop() # 패턴을 하나 뽑습니다.
 
     for i, elem in enumerate(cache[len(temp)]):
         if match(temp, elem):

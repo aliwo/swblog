@@ -21,7 +21,7 @@ class G:
 
 def bomb():
     for i, j in reversed(sorted(G.pending)):
-        G.board[i].pop(j)
+        G.board[i]._pop(j)
         G.bombed += 1
     G.pending = set()
 

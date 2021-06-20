@@ -10,7 +10,7 @@ class G:
 
 def dfs(visited, max_node, node):
     # print(f'node: {node} 방문')
-    visited.add(node)
+    visited._add(node)
     max_node += 1
     max_node_temp = max_node
 

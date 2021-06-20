@@ -19,7 +19,7 @@ class G:
 
 
 def dfs(visited, i, j):
-    visited.add(f'{i} {j}')
+    visited._add(f'{i} {j}')
 
     # 상하좌우
     next_move = []

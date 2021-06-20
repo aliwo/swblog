@@ -19,7 +19,7 @@ class MinHeap:
 
     def remove(self):
         self.swap(0, len(self.heap) - 1, self.heap)
-        valueToRemove = self.heap.pop()
+        valueToRemove = self.heap._pop()
         self.siftDown(0, len(self.heap) - 1, self.heap)
         return valueToRemove
 

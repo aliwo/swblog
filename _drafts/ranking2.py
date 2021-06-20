@@ -28,7 +28,7 @@ def topological_orders():
             topological_orders()
 
             for loser in value.get('win'):
-                graph[loser]['lose'].add(key)
+                graph[loser]['lose']._add(key)
             seen.pop()
 
 
@@ -36,8 +36,8 @@ def solution(n, results):
     global graph
     graph = {i: {'win': set(), 'lose': set()} for i in range(1, n+1)}
     for result in results:
-        graph[result[0]]['win'].add(result[1])
-        graph[result[1]]['lose'].add(result[0])
+        graph[result[0]]['win']._add(result[1])
+        graph[result[1]]['lose']._add(result[0])
 
     topological_orders()
 

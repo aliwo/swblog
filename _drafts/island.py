@@ -35,7 +35,7 @@ def solution(n, costs):
         after_construct = dfs_all()
 
         if after_construct == before_construct: # after 가 before 보다 큰 경우는 없다.
-            graph[elem[0]].pop()
+            graph[elem[0]]._pop()
             continue
 
         total_cost += elem[2]

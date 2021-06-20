@@ -15,7 +15,7 @@ def solution(heights):
     G.result = [0 for _ in range(len(heights))]
 
     while heights:
-        G.stack.append((len(heights), heights.pop()))
+        G.stack.append((len(heights), heights._pop()))
         if heights and heights[-1] > G.stack[-1][1]:
             while heights and  G.stack and heights[-1] > G.stack[-1][1]:
                 G.result[G.stack.pop()[0]-1] = len(heights)

@@ -18,8 +18,8 @@ def insert(li, n):
 
 def mix(scoville):
     new_food = scoville[0] + scoville[1] * 2
-    scoville.pop(0)
-    scoville.pop(0)
+    scoville._pop(0)
+    scoville._pop(0)
     insert(scoville, new_food)
 
 

@@ -18,7 +18,7 @@ def solution(people, limit):
             if i == j:
                 return boats + 1
 
-            weight = people.pop(j)
+            weight = people._pop(j)
             boats += 1 # 일단 마지막 뚱뚱이 하나 태움.
             if weight <= space: # i 랑 탈 수 있다면 함께 태워 보낸다.
                 break

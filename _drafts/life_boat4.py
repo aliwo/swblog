@@ -45,7 +45,7 @@ def solution(people, limit):
             space = limit - people[0]
             for j in reversed(range(len(people))):
                 if people[j] > space:  # 가장 얇은 사람이랑 타도 둘이서 못타는 뚱뚱이들
-                    people.pop(j)
+                    people._pop(j)
                     i -= 1
                     boats += 1
                 else:  # 뚱뚱이가 없으면 break

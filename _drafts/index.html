@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>input [type=button]{width : 30px;}</style>
+<script>
+
+var string = '';
+var temp;
+
+function calc (op) {
+    if (temp === undefined) {
+        temp = document.querySelector('[name="t"]');
+    }
+
+    if (op === '=') {
+        temp.value = eval(string);
+        string = ''
+        return
+    }
+    string += op
+    temp.value = string;
+}
+
+</script>
+</head>
+<body>
+<form name=f>
+<table border=1>
+<caption><mark>계산기</mark><br>
+<input type=text name=t size=16>
+</caption>
+<tr>
+<td><input type=button value="1" onclick=calc(this.value)></td>
+<td><input type=button value="2" onclick=calc(this.value)></td>
+<td><input type=button value="3" onclick=calc(this.value)></td>
+<td><input type=button value="+" onclick=calc(this.value)></td>
+</tr>
+<tr>
+<td><input type=button value="4" onclick=calc(this.value)></td>
+<td><input type=button value="5" onclick=calc(this.value)></td>
+<td><input type=button value="6" onclick=calc(this.value)></td>
+<td><input type=button value="-" onclick=calc(this.value)></td>
+</tr>
+<tr>
+<td><input type=button value="7" onclick=calc(this.value)></td>
+<td><input type=button value="8" onclick=calc(this.value)></td>
+<td><input type=button value="9" onclick=calc(this.value)></td>
+<td><input type=button value="*" onclick=calc(this.value)></td>
+</tr>
+<tr>
+<td><input type=button value="0" onclick=calc(this.value)></td>
+<td><input type=button value="." onclick=calc(this.value)></td>
+<td><input type=button value="=" onclick=calc(this.value)></td>
+<td><input type=button value="/" onclick=calc(this.value)></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

@@ -57,7 +57,7 @@ def solution2(bridge_length, weight, truck_weights):
         q.pop(0)
         if truck_weights:
             if sum(q) + truck_weights[0] <= weight:
-                q.append(truck_weights.pop(0))
+                q.append(truck_weights._pop(0))
             else:
                 q.append(0)
     return sec

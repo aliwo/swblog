@@ -46,8 +46,8 @@ def make_graph(height, width):
 
         for node in [f'{i -1} {j}', f'{i +1} {j}', f'{i} {j -1}', f'{i} {j +1}']: # 상하좌우
             if node in G.graph:
-                value.add(node)
-                G.graph[node].add(key)
+                value._add(node)
+                G.graph[node]._add(key)
 
 
 def solution(m, n, puddles):
