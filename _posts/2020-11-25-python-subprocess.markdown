@@ -1,50 +1,104 @@
 ---
 layout: single
-title:  "소연 AWS 이전"
-date:   2020-11-14 11:10:03 +0900
+title:  "python 디렉터리 안의 모든 영상 길이 sum 하기"
+date:   2020-11-25 11:10:03 +0900
 categories: [Python, Aws]
 --- 
 
-## 소개팅연구소
-현재 진행중인 프로젝트.
 
-스스로 보기 위해 포스팅 합니다!
+## 목적
 
-## Ec2 인스턴스 생성
-security group 에서 80번 포트를 여는 것! 잊지 맙시다.
-
-
-## python 3.8 설치
-여러 버전을 쓸 계획은 없으므로 pyenv 는 생략
-<a target="_blank" href="http://blog.cloudsys.co.kr/ubuntu-18-04-python3-venv-setup/">링크</a>
+하나의 디렉터리 안에 수 많은 폴더들이 있고
+그 안에 .mov 파일들이 들어 있습니다.
+이 영상들의 총 길이를 알아내고 싶다면 어떻게 해야 할까요?
 
 
-## pip update
-`pip install --update pip` 
-우분투 18 기본이 무려 pip 9... 지금 최신은 20
+## Environment
+* macOS Catalina
+* python 3.8
+* brew 가 깔려 있는 상태
 
 
-## Mysql 설치
-<a target="_blank" href="https://awakening95.tistory.com/2">링크</a>
+## 사전 준비
+
+```
+brew install ffmpeg
+```
+
+## ffmpeg 의 사용법
+<a href="https://stackoverflow.com/questions/6239350/how-to-extract-duration-time-from-ffmpeg-output" target="_blank">
+https://stackoverflow.com/questions/6239350/how-to-extract-duration-time-from-ffmpeg-output</a>
+
+```
+ffmpeg -i file.mp4 2>&1 | grep Duration | awk '{print $2}' | tr -d ,
+```
+
+file.mp4 의 자리에 원하는 파일의 경로를 넣으면 파일의 재생시간이 깔끔하게 출력됩니다.
 
 
-## 환경변수 설정
-(적절하게 key, prefix, value 수정해서 넣기!)
-_DATABASE_URI = ''
-_STAGE = 'PROD'
-TOAST_APP_KEY = ''
-SMS_SENDER_NO = ''
+## 전체 코드
+
+바로 복사해서 쓰시면 됩니다.
+
+```python
+import glob
+import subprocess
+from datetime import timedelta, datetime
+
+lengths = []
 
 
-## service 등록
-notion 참고!
+def get_length(filename):
+    ffmpeg = subprocess.Popen(
+        ['ffmpeg', '-i', filename],
+        stderr=subprocess.PIPE
+    )
+    grep = subprocess.Popen(
+        ['grep', 'Duration'],
+        stdin=ffmpeg.stderr,
+        stdout=subprocess.PIPE
+    )
+    awk = subprocess.Popen(
+        ['awk', "{print $2}"],
+        stdin=grep.stdout,
+        stdout=subprocess.PIPE
+    )
+    trim = subprocess.Popen(
+        ['tr', '-d', ','],
+        stdin=awk.stdout,
+        stdout=subprocess.PIPE
+    )
+    for line in trim.stdout:
+        # 딱 첫 번째 줄만 출력.
+        return line.decode('utf-8')
 
-## API
-
-보안상 보이면 안되는 컬럼은 문서에서도 안 보입니다!
-
-http://54.180.100.248/ui/
+# root_dir needs a trailing slash (i.e. /root/dir/)
+for filename in glob.iglob('/영상이 들어있는 폴더 경로/' + '**/*.mov', recursive=True):
+     lengths.append(get_length(filename))
 
 
+# 시간 parse
+deltas = []
+for elem in lengths:
+    datetime = datetime.strptime(elem[:-4], '%H:%M:%S')
+    delta = timedelta(hours=datetime.hour, minutes=datetime.minute, seconds=datetime.second)
+    deltas.append(delta)
+
+# sum
+print(sum(deltas, timedelta(0)))
+
+```
+
+## 설명
+
+`ffmpeg -i` 를 실행하면 딱 "재생시간" 만 나오면 정말 좋겠지만, 당장 필요없는 정보도 많이 나옵니다.
+심지어 stdout 이 아니라 stderr 로 출력을 하죠... (황당)
+그래서 딱 "재생시간"만 뽑아내기 위해 후처리를 합니다. 
+
+```
+ffmpeg -i file.mp4 2>&1 | grep Duration | awk '{print $2}' | tr -d ,
+```
+
+grep Duration 으로
 
 
