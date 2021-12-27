@@ -149,12 +149,12 @@ pop:
 #      - title: "with"
 #        url: /series/principles_of_python/
 #
-#  - title: 고급 파이썬 문법
-#    children:
+  - title: 고급 파이썬 문법
+    children:
 #      - title: "데코레이터"
 #        url: /series/principles_of_python/decorator/
 #      - title: "프로퍼티"
 #        url: /docs/pages/
-#      - title: "async await"
-#        url: /series/principles_of_python/async_await/
+      - title: "async await"
+        url: /series/principles_of_python/async_await/
 
