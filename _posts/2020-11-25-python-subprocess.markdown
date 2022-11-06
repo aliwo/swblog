@@ -89,8 +89,6 @@ print(sum(deltas, timedelta(0)))
 
 ```
 
-## 설명
-
 `ffmpeg -i` 를 실행하면 딱 "재생시간" 만 나오면 정말 좋겠지만, 당장 필요없는 정보도 많이 나옵니다.
 심지어 stdout 이 아니라 stderr 로 출력을 하죠... (황당)
 그래서 딱 "재생시간"만 뽑아내기 위해 후처리를 합니다. 
@@ -98,7 +96,4 @@ print(sum(deltas, timedelta(0)))
 ```
 ffmpeg -i file.mp4 2>&1 | grep Duration | awk '{print $2}' | tr -d ,
 ```
-
-grep Duration 으로
-
 
