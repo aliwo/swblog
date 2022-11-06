@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "정승원"
   avatar           : "/assets/images/var_name_meme.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "SW의 SWag 있는 프로그래밍"
+  bio              : "Python Developer @yogiyo"
   location         : "Ilsan, Goyang-si"
   email            : "aliwo@naver.com"
   links:
